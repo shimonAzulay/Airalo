@@ -28,11 +28,11 @@ struct TopTabView: View {
       .frame(width: 335)
       
       switch(selectedTab) {
-      case .local: LocalAreaView(viewModel: LocalAreaViewModel(networkService: AiraloNetworkService()))
+      case .local: LocalAreaView(viewModel: LocalAreaViewModel(networkService: NetworkServiceFactory.shared))
         
-      case .regional: RegionalAreaView(viewModel: RegionalAreaViewModel(networkService: AiraloNetworkService()))
+      case .regional: RegionalAreaView(viewModel: RegionalAreaViewModel(networkService: NetworkServiceFactory.shared))
         
-      case .global: GlobalView(viewModel: GlobalAreaViewModel(networkService: AiraloNetworkService()))
+      case .global: GlobalView(viewModel: GlobalAreaViewModel(networkService: NetworkServiceFactory.shared))
       }
     }
   }

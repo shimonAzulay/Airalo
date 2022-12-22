@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
   init() {
-    if let titleFont = UIFont(name: "IBMPlexSans-SemiBold", size: 10) {
+    if let titleFont = UIFont.plexSansSemiBold(size: 10) {
       UITabBarItem.appearance().setTitleTextAttributes([
         .font: titleFont], for: .normal)
     }

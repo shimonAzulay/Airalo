@@ -9,12 +9,18 @@ import Foundation
 
 struct PackageModel: Identifiable {
   let id = UUID()
-  let image: String
   let name: String
+  let imageUrl: URL
   let countriesAvilabilty: Int
   let dataAmount: String
   let timeValidity: String
   let price: String
+  let style: Style
   let colorStart: String
   let colorEnd: String
+  
+  enum Style {
+    case light
+    case dark
+  }
 }

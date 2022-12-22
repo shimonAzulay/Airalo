@@ -53,14 +53,17 @@ struct PackageItemView: View {
       HStack {
         Spacer()
         VStack() {
-          Image(package.image)
-            .resizable()
-            .frame(width: 140, height: 88)
-            .cornerRadius(10)
-            .shadow(color: Color.shadow,
-                    radius: 30,
-                    x: 0,
-                    y: 10)
+          CachedAsyncImageVIew(url: package.imageUrl) { image in
+              image.resizable()
+          } placeholder: {
+              ProgressView()
+          }
+          .frame(width: 140, height: 88)
+          .cornerRadius(10)
+          .shadow(color: Color.shadow,
+                  radius: 30,
+                  x: 0,
+                  y: 10)            
           Spacer()
         }
         .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 20))

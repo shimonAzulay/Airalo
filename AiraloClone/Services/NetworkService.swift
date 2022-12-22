@@ -8,6 +8,10 @@
 import Foundation
 import Combine
 
+enum NetworkServiceFactory {
+  static let shared: NetworkService = AiraloNetworkService()
+}
+
 enum NetworkServiceError: Error, CustomStringConvertible {
   case invalidEndpoint
   case invalidResponse

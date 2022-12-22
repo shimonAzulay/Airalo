@@ -22,5 +22,10 @@ struct RegionalAreaDetailView: View {
       .onAppear {
         viewModel.fetchPackages(forRegionId: regionId)
       }
+      .alert(item: $viewModel.error) { error in
+        Alert(title: Text("Something Went Wrong"),
+              message: Text(error.errorMessage),
+              dismissButton: .cancel())
+       }
   }
 }

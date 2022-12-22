@@ -7,17 +7,79 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "B0868ADC-3D06-4050-9BFE-7891F6432B08"
+            uuid = "64F7C7A7-4163-4926-AD2D-E90BC83E2393"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "AiraloClone/ViewModels/GlobalViewModel.swift"
+            filePath = "AiraloClone/Services/NetworkService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
-            landmarkName = "fetch()"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "data(request:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "64F7C7A7-4163-4926-AD2D-E90BC83E2393 - 30172aca79bad284"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for AiraloClone.AiraloNetworkService.data&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(request: Foundation.URLRequest) async throws -&gt; &#x3c4;_0_0"
+                  moduleName = "AiraloClone"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shimonazulay/Dev/Airalo/AiraloClone/Services/NetworkService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "68">
+               </Location>
+               <Location
+                  uuid = "64F7C7A7-4163-4926-AD2D-E90BC83E2393 - 222fa7c403ca1682"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for AiraloClone.AiraloNetworkService.data&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(request: Foundation.URLRequest) async throws -&gt; &#x3c4;_0_0"
+                  moduleName = "AiraloClone"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shimonazulay/Dev/Airalo/AiraloClone/Services/NetworkService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "44">
+               </Location>
+               <Location
+                  uuid = "64F7C7A7-4163-4926-AD2D-E90BC83E2393 - 7cdc271acf3f9782"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for AiraloClone.AiraloNetworkService.data&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(request: Foundation.URLRequest) async throws -&gt; &#x3c4;_0_0"
+                  moduleName = "AiraloClone"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shimonazulay/Dev/Airalo/AiraloClone/Services/NetworkService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "120">
+               </Location>
+               <Location
+                  uuid = "64F7C7A7-4163-4926-AD2D-E90BC83E2393 - 8778be0294723501"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for AiraloClone.AiraloNetworkService.data&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(request: Foundation.URLRequest) async throws -&gt; &#x3c4;_0_0"
+                  moduleName = "AiraloClone"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shimonazulay/Dev/Airalo/AiraloClone/Services/NetworkService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "36">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

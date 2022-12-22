@@ -9,7 +9,6 @@ import SwiftUI
 
 struct StoreView: View {
   @State private var searchText = ""
-  @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
   
   init() {
     if let titleColor = UIColor.normal,

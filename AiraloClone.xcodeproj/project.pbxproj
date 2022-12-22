@@ -22,13 +22,15 @@
 		9F6E31F62954BB9900523739 /* RegionalAreaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6E31F52954BB9900523739 /* RegionalAreaViewModel.swift */; };
 		9F6E31F82954BCE400523739 /* GlobalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6E31F72954BCE400523739 /* GlobalViewModel.swift */; };
 		9F6E31FA2954CDF100523739 /* Color+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6E31F92954CDF100523739 /* Color+Hex.swift */; };
-		9F6E31FC2954DA8E00523739 /* AreaPackagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6E31FB2954DA8E00523739 /* AreaPackagesView.swift */; };
 		9F6E32012954E1EF00523739 /* ViewModelError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6E32002954E1EF00523739 /* ViewModelError.swift */; };
 		9F6E32032954E5C900523739 /* Double+Price.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6E32022954E5C900523739 /* Double+Price.swift */; };
 		9F6E32072954E9E500523739 /* RegionalAreaDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6E32062954E9E500523739 /* RegionalAreaDetailView.swift */; };
 		9F6E32092954EA0A00523739 /* LocalAreaDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6E32082954EA0A00523739 /* LocalAreaDetailView.swift */; };
 		9F6E320B2954EA2F00523739 /* LocalAreaDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6E320A2954EA2F00523739 /* LocalAreaDetailViewModel.swift */; };
 		9F6E320D2954EA4100523739 /* RegionalAreaDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6E320C2954EA4100523739 /* RegionalAreaDetailViewModel.swift */; };
+		9F6E32112954EE4F00523739 /* String+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6E32102954EE4F00523739 /* String+Style.swift */; };
+		9F6E321729551BCA00523739 /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = 9F6E321629551BCA00523739 /* CachedAsyncImage */; };
+		9F6E321929551C6300523739 /* CachedAsyncImageVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6E321829551C6300523739 /* CachedAsyncImageVIew.swift */; };
 		9FE8329B2952036000CF16C6 /* AiraloCloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE8329A2952036000CF16C6 /* AiraloCloneApp.swift */; };
 		9FE8329D2952036000CF16C6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE8329C2952036000CF16C6 /* ContentView.swift */; };
 		9FE8329F2952036200CF16C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FE8329E2952036200CF16C6 /* Assets.xcassets */; };
@@ -60,13 +62,14 @@
 		9F6E31F52954BB9900523739 /* RegionalAreaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionalAreaViewModel.swift; sourceTree = "<group>"; };
 		9F6E31F72954BCE400523739 /* GlobalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalViewModel.swift; sourceTree = "<group>"; };
 		9F6E31F92954CDF100523739 /* Color+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Hex.swift"; sourceTree = "<group>"; };
-		9F6E31FB2954DA8E00523739 /* AreaPackagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaPackagesView.swift; sourceTree = "<group>"; };
 		9F6E32002954E1EF00523739 /* ViewModelError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelError.swift; sourceTree = "<group>"; };
 		9F6E32022954E5C900523739 /* Double+Price.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Price.swift"; sourceTree = "<group>"; };
 		9F6E32062954E9E500523739 /* RegionalAreaDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionalAreaDetailView.swift; sourceTree = "<group>"; };
 		9F6E32082954EA0A00523739 /* LocalAreaDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalAreaDetailView.swift; sourceTree = "<group>"; };
 		9F6E320A2954EA2F00523739 /* LocalAreaDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalAreaDetailViewModel.swift; sourceTree = "<group>"; };
 		9F6E320C2954EA4100523739 /* RegionalAreaDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionalAreaDetailViewModel.swift; sourceTree = "<group>"; };
+		9F6E32102954EE4F00523739 /* String+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Style.swift"; sourceTree = "<group>"; };
+		9F6E321829551C6300523739 /* CachedAsyncImageVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachedAsyncImageVIew.swift; sourceTree = "<group>"; };
 		9FE832972952036000CF16C6 /* AiraloClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AiraloClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FE8329A2952036000CF16C6 /* AiraloCloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AiraloCloneApp.swift; sourceTree = "<group>"; };
 		9FE8329C2952036000CF16C6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -87,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F6E321729551BCA00523739 /* CachedAsyncImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +123,7 @@
 				9F6E31E529549B5E00523739 /* Colors+Custom.swift */,
 				9F6E31F92954CDF100523739 /* Color+Hex.swift */,
 				9F6E32022954E5C900523739 /* Double+Price.swift */,
+				9F6E32102954EE4F00523739 /* String+Style.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -151,6 +156,28 @@
 				9F6E32002954E1EF00523739 /* ViewModelError.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		9F6E320E2954EC8D00523739 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				9F6E320F2954EC9A00523739 /* Segments */,
+				9FE832A82952064D00CF16C6 /* StoreView.swift */,
+				9FE832AC29520A8700CF16C6 /* TopTabView.swift */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+		9F6E320F2954EC9A00523739 /* Segments */ = {
+			isa = PBXGroup;
+			children = (
+				9FE832AA295208CB00CF16C6 /* LocalAreaView.swift */,
+				9F6E32082954EA0A00523739 /* LocalAreaDetailView.swift */,
+				9FE832B8295303CF00CF16C6 /* RegionalAreaView.swift */,
+				9F6E32062954E9E500523739 /* RegionalAreaDetailView.swift */,
+				9FE832C1295305A900CF16C6 /* GlobalView.swift */,
+			);
+			path = Segments;
 			sourceTree = "<group>";
 		};
 		9FE8328E2952036000CF16C6 = {
@@ -199,13 +226,7 @@
 		9FE832AE29523E4600CF16C6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				9FE832AA295208CB00CF16C6 /* LocalAreaView.swift */,
-				9F6E32082954EA0A00523739 /* LocalAreaDetailView.swift */,
-				9FE832B8295303CF00CF16C6 /* RegionalAreaView.swift */,
-				9F6E32062954E9E500523739 /* RegionalAreaDetailView.swift */,
-				9FE832C1295305A900CF16C6 /* GlobalView.swift */,
-				9FE832A82952064D00CF16C6 /* StoreView.swift */,
-				9FE832AC29520A8700CF16C6 /* TopTabView.swift */,
+				9F6E320E2954EC8D00523739 /* Store */,
 				9FE8329C2952036000CF16C6 /* ContentView.swift */,
 			);
 			path = Views;
@@ -216,9 +237,9 @@
 			children = (
 				9F6E31F32954B92A00523739 /* AreaView.swift */,
 				9FE832B52953021600CF16C6 /* AreaItemView.swift */,
-				9F6E31FB2954DA8E00523739 /* AreaPackagesView.swift */,
 				9FE832C72953541B00CF16C6 /* PackagesView.swift */,
 				9FE832C5295352D600CF16C6 /* PackageItemView.swift */,
+				9F6E321829551C6300523739 /* CachedAsyncImageVIew.swift */,
 			);
 			path = CommonViews;
 			sourceTree = "<group>";
@@ -239,6 +260,9 @@
 			dependencies = (
 			);
 			name = AiraloClone;
+			packageProductDependencies = (
+				9F6E321629551BCA00523739 /* CachedAsyncImage */,
+			);
 			productName = AiraloClone;
 			productReference = 9FE832972952036000CF16C6 /* AiraloClone.app */;
 			productType = "com.apple.product-type.application";
@@ -267,6 +291,9 @@
 				Base,
 			);
 			mainGroup = 9FE8328E2952036000CF16C6;
+			packageReferences = (
+				9F6E321529551BCA00523739 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */,
+			);
 			productRefGroup = 9FE832982952036000CF16C6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -298,7 +325,6 @@
 			files = (
 				9F6E31E629549B5E00523739 /* Colors+Custom.swift in Sources */,
 				9F6E31F82954BCE400523739 /* GlobalViewModel.swift in Sources */,
-				9F6E31FC2954DA8E00523739 /* AreaPackagesView.swift in Sources */,
 				9FE832C2295305A900CF16C6 /* GlobalView.swift in Sources */,
 				9FE832AD29520A8700CF16C6 /* TopTabView.swift in Sources */,
 				9F6E32032954E5C900523739 /* Double+Price.swift in Sources */,
@@ -308,6 +334,7 @@
 				9F6E31DC295490BC00523739 /* AreaModel.swift in Sources */,
 				9FE832C6295352D600CF16C6 /* PackageItemView.swift in Sources */,
 				9F6E31F22954B26100523739 /* Responses.swift in Sources */,
+				9F6E321929551C6300523739 /* CachedAsyncImageVIew.swift in Sources */,
 				9F6E31FA2954CDF100523739 /* Color+Hex.swift in Sources */,
 				9F6E31F62954BB9900523739 /* RegionalAreaViewModel.swift in Sources */,
 				9FE8329D2952036000CF16C6 /* ContentView.swift in Sources */,
@@ -318,6 +345,7 @@
 				9F6E31E92954A44C00523739 /* NetworkService.swift in Sources */,
 				9FE832A92952064D00CF16C6 /* StoreView.swift in Sources */,
 				9FE8329B2952036000CF16C6 /* AiraloCloneApp.swift in Sources */,
+				9F6E32112954EE4F00523739 /* String+Style.swift in Sources */,
 				9F6E32072954E9E500523739 /* RegionalAreaDetailView.swift in Sources */,
 				9FE832C82953541B00CF16C6 /* PackagesView.swift in Sources */,
 				9F6E32012954E1EF00523739 /* ViewModelError.swift in Sources */,
@@ -527,6 +555,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9F6E321529551BCA00523739 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/lorenzofiamingo/swiftui-cached-async-image";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9F6E321629551BCA00523739 /* CachedAsyncImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9F6E321529551BCA00523739 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */;
+			productName = CachedAsyncImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9FE8328F2952036000CF16C6 /* Project object */;
 }

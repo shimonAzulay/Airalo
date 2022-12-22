@@ -12,9 +12,12 @@ struct AreaItemView: View {
   
   var body: some View {
     HStack(alignment: .center, spacing: 20) {
-      Image(model.imageUrl)
-        .resizable()
-        .frame(width: 37, height: 28)
+      CachedAsyncImageVIew(url: model.imageUrl) { image in
+          image.resizable()
+      } placeholder: {
+          ProgressView()
+      }
+      .frame(width: 37, height: 28)
       Text(model.name)
         .font(Font.plexSansMedium(size: 15))
         .foregroundColor(Color.normal)

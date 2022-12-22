@@ -10,5 +10,5 @@ import Foundation
 struct AreaModel: Identifiable {
   let id: Int
   let name: String
-  let imageUrl: String
+  let imageUrl: URL
 }

@@ -32,32 +32,22 @@ struct AreaResponse: Decodable {
 }
 
 struct PackagesResponse: Decodable {
-  let title: String
-  let imageUrl: URL
   let packagesDetails: [PackageDetailResponse]
   
   enum OuterKeys: String, CodingKey {
-    case title, image, packages
-  }
-  
-  enum ImageKeys: String, CodingKey {
-    case url
+    case packages
   }
   
   init(from decoder: Decoder) throws {
     let outerContainer = try decoder.container(keyedBy: OuterKeys.self)
-    
-    let imageContainer = try outerContainer.nestedContainer(keyedBy: ImageKeys.self,
-                                                            forKey: .image)
-    
-    self.title = try outerContainer.decode(String.self, forKey: .title)
-    self.imageUrl = try imageContainer.decode(URL.self, forKey: .url)
     self.packagesDetails = try outerContainer.decode([PackageDetailResponse].self, forKey: .packages)
   }
   
   struct PackageDetailResponse: Decodable {
+    let title: String
     let data: String
     let validity: String
+    let imageUrl: URL
     let price: Double
     let style: String
     let gradientStart: String
@@ -71,9 +61,14 @@ struct PackagesResponse: Decodable {
     }
     
     enum OperatorKeys: String, CodingKey {
-      case style, countries
+      case title, style, countries
+      case imageUrl = "image"
       case gradientStart = "gradient_start"
       case gradientEnd = "gradient_end"
+    }
+    
+    enum ImageKeys: String, CodingKey {
+      case url
     }
     
     init(from decoder: Decoder) throws {
@@ -82,9 +77,13 @@ struct PackagesResponse: Decodable {
       self.data = try outerContainer.decode(String.self, forKey: .data)
       self.validity = try outerContainer.decode(String.self, forKey: .validity)
       self.price = try outerContainer.decode(Double.self, forKey: .price)
-      let operatorContainer = try outerContainer.nestedContainer(keyedBy: OperatorKeys.self,
-                                                                 forKey: .operator)
+      
+      let operatorContainer = try outerContainer.nestedContainer(keyedBy: OperatorKeys.self, forKey: .operator)
+      self.title = try operatorContainer.decode(String.self, forKey: .title)
       self.style = try operatorContainer.decode(String.self, forKey: .style)
+      
+      let imageContainer = try operatorContainer.nestedContainer(keyedBy: ImageKeys.self, forKey: .imageUrl)
+      self.imageUrl = try imageContainer.decode(URL.self, forKey: .url)
       self.gradientStart = try operatorContainer.decode(String.self, forKey: .gradientStart)
       self.gradientEnd = try operatorContainer.decode(String.self, forKey: .gradientEnd)
       self.countires = try operatorContainer.decode([Country].self, forKey: .countries)

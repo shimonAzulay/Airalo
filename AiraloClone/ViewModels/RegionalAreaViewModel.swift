@@ -21,7 +21,9 @@ class RegionalAreaViewModel: ObservableObject {
     Task { @MainActor in
       let response: [AreaResponse] = try await networkService.data(endpoint: AiraloEndpoint.regional)
       
-      areas = response.compactMap { AreaModel(id: $0.id, name: $0.title, imageUrl: "spain") }
+      areas = response.compactMap { AreaModel(id: $0.id,
+                                              name: $0.title,
+                                              imageUrl: $0.imageUrl) }
     }
   }
 }
