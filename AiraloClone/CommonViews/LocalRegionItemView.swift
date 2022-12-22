@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ListItemView: View {
+struct LocalRegionItemView: View {
   var image: String
   var description: String
   
@@ -22,6 +22,8 @@ struct ListItemView: View {
         .resizable()
         .frame(width: 37, height: 28)
       Text(description)
+        .font(Font.custom("IBMPlexSans-Medium", size: 15))
+        .foregroundColor(Color("TextColor"))
       Spacer()
       Image(systemName: "chevron.right")
         .resizable()

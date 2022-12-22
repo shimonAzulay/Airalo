@@ -8,13 +8,26 @@
 import SwiftUI
 
 struct PackagesView: View {
+  let data = [Model(title: "Spain"),
+              Model(title: "Spain"),
+              Model(title: "Spain"),
+              Model(title: "Spain"),
+              Model(title: "Spain"),
+              Model(title: "Spain"),
+              Model(title: "Spain"),
+              Model(title: "Spain"),
+              Model(title: "Spain"),
+              Model(title: "Spain"),
+              Model(title: "Spain"),
+              Model(title: "Spain")]
+  
   var body: some View {
     ScrollView {
-      ListView<Text, PackageItemView, Text>(spacing: 20, item: {
-        PackageItemView()
-      }, detailedItem: {
-        Text("Global")
-      })
+      LazyVGrid(columns: [GridItem()], spacing: 20) {
+        ForEach(data) { article in
+          PackageItemView()
+        }
+      }
     }
   }
 }

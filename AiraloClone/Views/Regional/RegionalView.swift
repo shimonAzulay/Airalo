@@ -8,17 +8,34 @@
 import SwiftUI
 
 struct RegionalView: View {
+  let data = [Model(title: "Spain"),
+              Model(title: "Spain"),
+              Model(title: "Spain"),
+              Model(title: "Spain"),
+              Model(title: "Spain"),
+              Model(title: "Spain"),
+              Model(title: "Spain"),
+              Model(title: "Spain"),
+              Model(title: "Spain"),
+              Model(title: "Spain"),
+              Model(title: "Spain"),
+              Model(title: "Spain")]
+  
   var body: some View {
-    ListView(spacing: 10, header: {
+    LazyVGrid(columns: [GridItem()], spacing: 10) {
       Text("Regions")
         .frame(width: 335, height: 55, alignment: .leading)
-    },
-             item: {
-      RegionalItemView(image: "africa", description: "Africa")
-    },
-             detailedItem: {
-      PackagesView()
-        .navigationTitle("Africa")
-    })
+      
+      ForEach(data) { article in
+        NavigationLink(destination: {
+          PackagesView()
+            .navigationTitle("Africa")
+            .navigationBarTitleDisplayMode(.large)
+        }, label: {
+          LocalRegionItemView(image: "africa", description: "Africa")
+        })
+        .buttonStyle(.plain)
+      }
+    }
   }
 }

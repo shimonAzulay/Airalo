@@ -70,8 +70,12 @@ extension PackageItemView {
       HStack {
         VStack(alignment: .leading, spacing: 5.5) {
           Text("Discover Global")
+            .font(Font.custom("IBMPlexSans-SemiBold", size: 19))
+            .foregroundColor(Color("PackageTextColor"))
           HStack(spacing: 5) {
             Text("87 Countries")
+              .font(Font.custom("IBMPlexSans-Medium", size: 13))
+              .foregroundColor(Color("PackageTextColor"))
             Text("Icon")
           }
         }
@@ -94,19 +98,28 @@ extension PackageItemView {
       HStack(spacing: 6) {
         Text("Icon")
         Text(detail)
+          .font(Font.custom("IBMPlexSans-SemiBold", size: 11))
+          .foregroundColor(Color("PackageTextColor"))
         Spacer()
         Text(amount)
+          .font(Font.custom("IBMPlexSans-Medium", size: 17))
+          .foregroundColor(Color("PackageTextColor"))
       }
     }
   }
   
   struct ButtonView: View {
     var body: some View {
-      Button("US$9 - BUY NOW") {}
+      Button(action: {}
+             ,label: {
+        Text("US$9 - BUY NOW")
+          .font(Font.custom("IBMPlexSans-SemiBold", size: 11))
+          .foregroundColor(Color("PackageTextColor"))
+      })
         .frame(width: 295, height: 44)
         .overlay(
           RoundedRectangle(cornerRadius: 10)
-            .stroke(.white, lineWidth: 1)
+            .stroke(Color("PackageTextColor"), lineWidth: 1)
         )
     }
   }
