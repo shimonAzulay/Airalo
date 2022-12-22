@@ -24,13 +24,13 @@ struct PackageItemView: View {
           Divider()
           
           InnerView {
-            DetailView(detail: "DATA", amount: "\(package.dataAmount) GB")
+            DetailView(detail: "DATA", amount: package.dataAmount)
           }
           
           Divider()
           
           InnerView {
-            DetailView(detail: "VALIDITY", amount: "\(package.timeValidity) Days")
+            DetailView(detail: "VALIDITY", amount: package.timeValidity)
           }
           
           Divider()
@@ -39,7 +39,10 @@ struct PackageItemView: View {
             ButtonView(price: package.price)
           }
         }
-        .background(Gradient(colors: [Color.blue, Color.green]))
+        .background(LinearGradient(colors: [Color(hex: package.colorStart),
+                                            Color(hex: package.colorEnd)],
+                                   startPoint: .leading,
+                                   endPoint: .trailing))
         .cornerRadius(10)
         .shadow(color: Color.shadow,
                 radius: 30,
@@ -115,12 +118,12 @@ extension PackageItemView {
   }
   
   struct ButtonView: View {
-    var price: Int
+    var price: String
     
     var body: some View {
       Button(action: {}
              ,label: {
-        Text("US$\(price) - BUY NOW")
+        Text("\(price) - BUY NOW")
           .font(Font.plexSansSemiBold(size: 11))
           .foregroundColor(Color.packageLight)
       })

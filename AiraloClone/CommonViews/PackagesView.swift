@@ -8,24 +8,7 @@
 import SwiftUI
 
 struct PackagesView: View {
-  let packages = [PackageModel(image: "spain",
-                               name: "Discover Global",
-                               countriesAvilabilty: 85,
-                               dataAmount: 1,
-                               timeValidity: 7,
-                               price: 9),
-                  PackageModel(image: "spain",
-                               name: "Discover Global",
-                               countriesAvilabilty: 85,
-                               dataAmount: 3,
-                               timeValidity: 15,
-                               price: 24),
-                  PackageModel(image: "spain",
-                               name: "Discover Global",
-                               countriesAvilabilty: 85,
-                               dataAmount: 5,
-                               timeValidity: 30,
-                               price: 35)]
+  @Binding var packages: [PackageModel]
   
   var body: some View {
     ScrollView {
@@ -35,5 +18,6 @@ struct PackagesView: View {
         }
       }
     }
+    .toolbar(.hidden, for: .tabBar)
   }
 }

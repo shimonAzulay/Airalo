@@ -8,7 +8,7 @@
 import Foundation
 
 struct AreaModel: Identifiable {
-  let id = UUID()
-  let image: String
+  let id: Int
   let name: String
+  let imageUrl: String
 }

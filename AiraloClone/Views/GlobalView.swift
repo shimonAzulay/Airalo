@@ -8,7 +8,21 @@
 import SwiftUI
 
 struct GlobalView: View {
+  @StateObject var viewModel: GlobalAreaViewModel
+  
+  init(viewModel: GlobalAreaViewModel) {
+    self._viewModel = StateObject(wrappedValue: viewModel)
+  }
+  
   var body: some View {
-    PackagesView()
+    PackagesView(packages: $viewModel.packages)
+      .onAppear {
+        viewModel.fetch()
+      }
+      .alert(item: $viewModel.error) { error in
+        Alert(title: Text("Something Went Wrong"),
+              message: Text(error.errorMessage),
+              dismissButton: .cancel())
+       }
   }
 }

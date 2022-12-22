@@ -7,17 +7,17 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "D3D0CDA4-796C-4C21-A0E9-441B875C702A"
+            uuid = "B0868ADC-3D06-4050-9BFE-7891F6432B08"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "AiraloClone/CommonViews/AreaItemView.swift"
+            filePath = "AiraloClone/ViewModels/GlobalViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "11"
-            endingLineNumber = "11"
-            landmarkName = "AreaItemView"
-            landmarkType = "14">
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "fetch()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

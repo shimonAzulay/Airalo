@@ -8,28 +8,23 @@
 import SwiftUI
 
 struct LocalAreaView: View {
-  let data = [AreaModel(image: "spain", name: "Spain"),
-              AreaModel(image: "spain", name: "Spain"),
-              AreaModel(image: "spain", name: "Spain"),
-              AreaModel(image: "spain", name: "Spain")]
+  @StateObject var viewModel: LocalAreaViewModel
+  
+  init(viewModel: LocalAreaViewModel) {
+    self._viewModel = StateObject(wrappedValue: viewModel)
+  }
   
   var body: some View {
-    LazyVGrid(columns: [GridItem()], spacing: 10) {
-      Text("Popular Countries")
-        .font(Font.plexSansSemiBold(size: 19))
-        .foregroundColor(Color.normal)
-        .frame(width: 335, height: 55, alignment: .leading)
-      
-      ForEach(data) { area in
-        NavigationLink(destination: {
-          PackagesView()
-            .navigationTitle(area.name)
-            .navigationBarTitleDisplayMode(.large)
-        }, label: {
-          AreaItemView(model: area)
-        })
-        .buttonStyle(.plain)
-      }
+    AreaView(areas: $viewModel.areas, title: "Popular Countries") { countryId in
+      LocalAreaDetailView(viewModel: LocalAreaDetailViewModel(networkService: viewModel.networkService), countryId: countryId)
     }
+    .onAppear {
+      viewModel.fetch()
+    }
+    .alert(item: $viewModel.error) { error in
+      Alert(title: Text("Something Went Wrong"),
+            message: Text(error.errorMessage),
+            dismissButton: .cancel())
+     }
   }
 }

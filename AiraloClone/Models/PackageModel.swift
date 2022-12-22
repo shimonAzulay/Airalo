@@ -12,7 +12,9 @@ struct PackageModel: Identifiable {
   let image: String
   let name: String
   let countriesAvilabilty: Int
-  let dataAmount: Int
-  let timeValidity: Int
-  let price: Int
+  let dataAmount: String
+  let timeValidity: String
+  let price: String
+  let colorStart: String
+  let colorEnd: String
 }

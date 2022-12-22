@@ -12,7 +12,7 @@ struct AreaItemView: View {
   
   var body: some View {
     HStack(alignment: .center, spacing: 20) {
-      Image(model.image)
+      Image(model.imageUrl)
         .resizable()
         .frame(width: 37, height: 28)
       Text(model.name)
