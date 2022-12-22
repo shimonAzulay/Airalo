@@ -23,8 +23,8 @@ struct TopTabView: View {
         Text("Global eSIM").tag(TopTab.global)
       }
       .pickerStyle(.segmented)
-      .font(Font.custom("IBMPlexSans-Medium", size: 13))
-      .foregroundColor(Color("SegmentedTextColor"))
+      .font(Font.plexSansMedium(size: 13))
+      .foregroundColor(Color.segmented)
       .frame(width: 335)
       
       switch(selectedTab) {

@@ -12,8 +12,8 @@ struct StoreView: View {
   @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
   
   init() {
-    if let titleColor = UIColor(named: "TextColor"),
-       let titleFont = UIFont(name: "IBMPlexSans-SemiBold", size: 27) {
+    if let titleColor = UIColor.normal,
+       let titleFont = UIFont.plexSansSemiBold(size: 27) {
       UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: titleColor,
                                                                .font: titleFont]
     }
@@ -28,8 +28,8 @@ struct StoreView: View {
       }
       .searchable(text: $searchText,
                   prompt: "Search data packs for +190 countries and regions")
-      .font(Font.custom("IBMPlexSans-Regular", size: 13))
-      .foregroundColor(Color("TextColor"))
+      .font(Font.plexSansRegular(size: 13))
+      .foregroundColor(Color.normal)
     }
   }
 }

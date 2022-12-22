@@ -41,7 +41,7 @@ struct PackageItemView: View {
         }
         .background(Gradient(colors: [Color.blue, Color.green]))
         .cornerRadius(10)
-        .shadow(color: Color("ItemShadowColor"),
+        .shadow(color: Color.shadow,
                 radius: 30,
                 x: 0,
                 y: 10)
@@ -54,7 +54,7 @@ struct PackageItemView: View {
             .resizable()
             .frame(width: 140, height: 88)
             .cornerRadius(10)
-            .shadow(color: Color("ItemShadowColor"),
+            .shadow(color: Color.shadow,
                     radius: 30,
                     x: 0,
                     y: 10)
@@ -76,12 +76,12 @@ extension PackageItemView {
       HStack {
         VStack(alignment: .leading, spacing: 5.5) {
           Text(title)
-            .font(Font.custom("IBMPlexSans-SemiBold", size: 19))
-            .foregroundColor(Color("PackageTextColor"))
+            .font(Font.plexSansSemiBold(size: 19))
+            .foregroundColor(Color.packageLight)
           HStack(spacing: 5) {
             Text("\(countriesAvilabilty) Countries")
-              .font(Font.custom("IBMPlexSans-Medium", size: 13))
-              .foregroundColor(Color("PackageTextColor"))
+              .font(Font.plexSansMedium(size: 13))
+              .foregroundColor(Color.packageLight)
             Text("Icon")
           }
         }
@@ -104,12 +104,12 @@ extension PackageItemView {
       HStack(spacing: 6) {
         Text("Icon")
         Text(detail)
-          .font(Font.custom("IBMPlexSans-SemiBold", size: 11))
-          .foregroundColor(Color("PackageTextColor"))
+          .font(Font.plexSansSemiBold(size: 11))
+          .foregroundColor(Color.packageLight)
         Spacer()
         Text(amount)
-          .font(Font.custom("IBMPlexSans-Medium", size: 17))
-          .foregroundColor(Color("PackageTextColor"))
+          .font(Font.plexSansMedium(size: 17))
+          .foregroundColor(Color.packageLight)
       }
     }
   }
@@ -121,13 +121,13 @@ extension PackageItemView {
       Button(action: {}
              ,label: {
         Text("US$\(price) - BUY NOW")
-          .font(Font.custom("IBMPlexSans-SemiBold", size: 11))
-          .foregroundColor(Color("PackageTextColor"))
+          .font(Font.plexSansSemiBold(size: 11))
+          .foregroundColor(Color.packageLight)
       })
         .frame(width: 295, height: 44)
         .overlay(
           RoundedRectangle(cornerRadius: 10)
-            .stroke(Color("PackageTextColor"), lineWidth: 1)
+            .stroke(Color.packageLight, lineWidth: 1)
         )
     }
   }

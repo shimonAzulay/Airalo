@@ -16,8 +16,8 @@ struct LocalAreaView: View {
   var body: some View {
     LazyVGrid(columns: [GridItem()], spacing: 10) {
       Text("Popular Countries")
-        .font(Font.custom("IBMPlexSans-SemiBold", size: 19))
-        .foregroundColor(Color("TextColor"))
+        .font(Font.plexSansSemiBold(size: 19))
+        .foregroundColor(Color.normal)
         .frame(width: 335, height: 55, alignment: .leading)
       
       ForEach(data) { area in

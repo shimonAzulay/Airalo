@@ -12,6 +12,8 @@
 		9F6E31D6295458AC00523739 /* IBMPlexSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9F6E31C42954589400523739 /* IBMPlexSans-SemiBold.ttf */; };
 		9F6E31DC295490BC00523739 /* AreaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6E31DB295490BC00523739 /* AreaModel.swift */; };
 		9F6E31DE295490F400523739 /* PackageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6E31DD295490F400523739 /* PackageModel.swift */; };
+		9F6E31E4295498DA00523739 /* Fonts+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6E31E3295498DA00523739 /* Fonts+Custom.swift */; };
+		9F6E31E629549B5E00523739 /* Colors+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6E31E529549B5E00523739 /* Colors+Custom.swift */; };
 		9FE8329B2952036000CF16C6 /* AiraloCloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE8329A2952036000CF16C6 /* AiraloCloneApp.swift */; };
 		9FE8329D2952036000CF16C6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE8329C2952036000CF16C6 /* ContentView.swift */; };
 		9FE8329F2952036200CF16C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FE8329E2952036200CF16C6 /* Assets.xcassets */; };
@@ -33,6 +35,8 @@
 		9F6E31D9295458D500523739 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		9F6E31DB295490BC00523739 /* AreaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaModel.swift; sourceTree = "<group>"; };
 		9F6E31DD295490F400523739 /* PackageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageModel.swift; sourceTree = "<group>"; };
+		9F6E31E3295498DA00523739 /* Fonts+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Fonts+Custom.swift"; sourceTree = "<group>"; };
+		9F6E31E529549B5E00523739 /* Colors+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Colors+Custom.swift"; sourceTree = "<group>"; };
 		9FE832972952036000CF16C6 /* AiraloClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AiraloClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FE8329A2952036000CF16C6 /* AiraloCloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AiraloCloneApp.swift; sourceTree = "<group>"; };
 		9FE8329C2952036000CF16C6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -78,6 +82,15 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		9F6E31E2295498C900523739 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9F6E31E3295498DA00523739 /* Fonts+Custom.swift */,
+				9F6E31E529549B5E00523739 /* Colors+Custom.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		9FE8328E2952036000CF16C6 = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +110,7 @@
 		9FE832992952036000CF16C6 /* AiraloClone */ = {
 			isa = PBXGroup;
 			children = (
+				9F6E31E2295498C900523739 /* Extensions */,
 				9F6E31D9295458D500523739 /* Info.plist */,
 				9F6E31BC2954588300523739 /* Fonts */,
 				9FE832B7295303A500CF16C6 /* CommonViews */,
@@ -213,6 +227,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F6E31E629549B5E00523739 /* Colors+Custom.swift in Sources */,
 				9FE832C2295305A900CF16C6 /* GlobalView.swift in Sources */,
 				9FE832AD29520A8700CF16C6 /* TopTabView.swift in Sources */,
 				9FE832AB295208CB00CF16C6 /* LocalAreaView.swift in Sources */,
@@ -225,6 +240,7 @@
 				9FE832A92952064D00CF16C6 /* StoreView.swift in Sources */,
 				9FE8329B2952036000CF16C6 /* AiraloCloneApp.swift in Sources */,
 				9FE832C82953541B00CF16C6 /* PackagesView.swift in Sources */,
+				9F6E31E4295498DA00523739 /* Fonts+Custom.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
