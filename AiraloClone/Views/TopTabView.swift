@@ -28,8 +28,8 @@ struct TopTabView: View {
       .frame(width: 335)
       
       switch(selectedTab) {
-      case .local: LocalView()
-      case .regional: RegionalView()
+      case .local: LocalAreaView()
+      case .regional: RegionalAreaView()
       case .global: GlobalView()
       }
     }

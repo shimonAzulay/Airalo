@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct PackageItemView: View {
+  var package: PackageModel
+  
   var body: some View {
     ZStack {
       VStack {
@@ -15,25 +17,26 @@ struct PackageItemView: View {
           .frame(height: 20)
         VStack {
           InnerView {
-            HeaderView()
+            HeaderView(title: package.name,
+                       countriesAvilabilty: package.countriesAvilabilty)
           }
           
           Divider()
           
           InnerView {
-            DetailView(detail: "DATA", amount: "1 GB")
+            DetailView(detail: "DATA", amount: "\(package.dataAmount) GB")
           }
           
           Divider()
           
           InnerView {
-            DetailView(detail: "VALIDITY", amount: "7 Days")
+            DetailView(detail: "VALIDITY", amount: "\(package.timeValidity) Days")
           }
           
           Divider()
           
           InnerView {
-            ButtonView()
+            ButtonView(price: package.price)
           }
         }
         .background(Gradient(colors: [Color.blue, Color.green]))
@@ -47,7 +50,7 @@ struct PackageItemView: View {
       HStack {
         Spacer()
         VStack() {
-          Image("spain")
+          Image(package.image)
             .resizable()
             .frame(width: 140, height: 88)
             .cornerRadius(10)
@@ -66,14 +69,17 @@ struct PackageItemView: View {
 
 extension PackageItemView {
   struct HeaderView: View {
+    var title: String
+    var countriesAvilabilty: Int
+    
     var body: some View {
       HStack {
         VStack(alignment: .leading, spacing: 5.5) {
-          Text("Discover Global")
+          Text(title)
             .font(Font.custom("IBMPlexSans-SemiBold", size: 19))
             .foregroundColor(Color("PackageTextColor"))
           HStack(spacing: 5) {
-            Text("87 Countries")
+            Text("\(countriesAvilabilty) Countries")
               .font(Font.custom("IBMPlexSans-Medium", size: 13))
               .foregroundColor(Color("PackageTextColor"))
             Text("Icon")
@@ -109,10 +115,12 @@ extension PackageItemView {
   }
   
   struct ButtonView: View {
+    var price: Int
+    
     var body: some View {
       Button(action: {}
              ,label: {
-        Text("US$9 - BUY NOW")
+        Text("US$\(price) - BUY NOW")
           .font(Font.custom("IBMPlexSans-SemiBold", size: 11))
           .foregroundColor(Color("PackageTextColor"))
       })

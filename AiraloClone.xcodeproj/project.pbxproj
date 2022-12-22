@@ -10,15 +10,17 @@
 		9F6E31CD295458AC00523739 /* IBMPlexSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9F6E31C02954589400523739 /* IBMPlexSans-Medium.ttf */; };
 		9F6E31D4295458AC00523739 /* IBMPlexSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9F6E31C62954589400523739 /* IBMPlexSans-Regular.ttf */; };
 		9F6E31D6295458AC00523739 /* IBMPlexSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9F6E31C42954589400523739 /* IBMPlexSans-SemiBold.ttf */; };
+		9F6E31DC295490BC00523739 /* AreaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6E31DB295490BC00523739 /* AreaModel.swift */; };
+		9F6E31DE295490F400523739 /* PackageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6E31DD295490F400523739 /* PackageModel.swift */; };
 		9FE8329B2952036000CF16C6 /* AiraloCloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE8329A2952036000CF16C6 /* AiraloCloneApp.swift */; };
 		9FE8329D2952036000CF16C6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE8329C2952036000CF16C6 /* ContentView.swift */; };
 		9FE8329F2952036200CF16C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FE8329E2952036200CF16C6 /* Assets.xcassets */; };
 		9FE832A22952036200CF16C6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FE832A12952036200CF16C6 /* Preview Assets.xcassets */; };
 		9FE832A92952064D00CF16C6 /* StoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE832A82952064D00CF16C6 /* StoreView.swift */; };
-		9FE832AB295208CB00CF16C6 /* LocalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE832AA295208CB00CF16C6 /* LocalView.swift */; };
+		9FE832AB295208CB00CF16C6 /* LocalAreaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE832AA295208CB00CF16C6 /* LocalAreaView.swift */; };
 		9FE832AD29520A8700CF16C6 /* TopTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE832AC29520A8700CF16C6 /* TopTabView.swift */; };
-		9FE832B62953021600CF16C6 /* LocalRegionItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE832B52953021600CF16C6 /* LocalRegionItemView.swift */; };
-		9FE832B9295303CF00CF16C6 /* RegionalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE832B8295303CF00CF16C6 /* RegionalView.swift */; };
+		9FE832B62953021600CF16C6 /* AreaItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE832B52953021600CF16C6 /* AreaItemView.swift */; };
+		9FE832B9295303CF00CF16C6 /* RegionalAreaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE832B8295303CF00CF16C6 /* RegionalAreaView.swift */; };
 		9FE832C2295305A900CF16C6 /* GlobalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE832C1295305A900CF16C6 /* GlobalView.swift */; };
 		9FE832C6295352D600CF16C6 /* PackageItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE832C5295352D600CF16C6 /* PackageItemView.swift */; };
 		9FE832C82953541B00CF16C6 /* PackagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE832C72953541B00CF16C6 /* PackagesView.swift */; };
@@ -29,16 +31,18 @@
 		9F6E31C42954589400523739 /* IBMPlexSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexSans-SemiBold.ttf"; sourceTree = "<group>"; };
 		9F6E31C62954589400523739 /* IBMPlexSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexSans-Regular.ttf"; sourceTree = "<group>"; };
 		9F6E31D9295458D500523739 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		9F6E31DB295490BC00523739 /* AreaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaModel.swift; sourceTree = "<group>"; };
+		9F6E31DD295490F400523739 /* PackageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageModel.swift; sourceTree = "<group>"; };
 		9FE832972952036000CF16C6 /* AiraloClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AiraloClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FE8329A2952036000CF16C6 /* AiraloCloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AiraloCloneApp.swift; sourceTree = "<group>"; };
 		9FE8329C2952036000CF16C6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9FE8329E2952036200CF16C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9FE832A12952036200CF16C6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9FE832A82952064D00CF16C6 /* StoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreView.swift; sourceTree = "<group>"; };
-		9FE832AA295208CB00CF16C6 /* LocalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalView.swift; sourceTree = "<group>"; };
+		9FE832AA295208CB00CF16C6 /* LocalAreaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalAreaView.swift; sourceTree = "<group>"; };
 		9FE832AC29520A8700CF16C6 /* TopTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopTabView.swift; sourceTree = "<group>"; };
-		9FE832B52953021600CF16C6 /* LocalRegionItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalRegionItemView.swift; sourceTree = "<group>"; };
-		9FE832B8295303CF00CF16C6 /* RegionalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionalView.swift; sourceTree = "<group>"; };
+		9FE832B52953021600CF16C6 /* AreaItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaItemView.swift; sourceTree = "<group>"; };
+		9FE832B8295303CF00CF16C6 /* RegionalAreaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionalAreaView.swift; sourceTree = "<group>"; };
 		9FE832C1295305A900CF16C6 /* GlobalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalView.swift; sourceTree = "<group>"; };
 		9FE832C5295352D600CF16C6 /* PackageItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageItemView.swift; sourceTree = "<group>"; };
 		9FE832C72953541B00CF16C6 /* PackagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackagesView.swift; sourceTree = "<group>"; };
@@ -65,6 +69,15 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		9F6E31DA2954905E00523739 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9F6E31DB295490BC00523739 /* AreaModel.swift */,
+				9F6E31DD295490F400523739 /* PackageModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		9FE8328E2952036000CF16C6 = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +100,7 @@
 				9F6E31D9295458D500523739 /* Info.plist */,
 				9F6E31BC2954588300523739 /* Fonts */,
 				9FE832B7295303A500CF16C6 /* CommonViews */,
+				9F6E31DA2954905E00523739 /* Models */,
 				9FE832AE29523E4600CF16C6 /* Views */,
 				9FE8329A2952036000CF16C6 /* AiraloCloneApp.swift */,
 				9FE8329E2952036200CF16C6 /* Assets.xcassets */,
@@ -106,9 +120,9 @@
 		9FE832AE29523E4600CF16C6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				9FE832C0295304BB00CF16C6 /* Global */,
-				9FE832BF295304B200CF16C6 /* Regional */,
-				9FE832BE295304A100CF16C6 /* Local */,
+				9FE832AA295208CB00CF16C6 /* LocalAreaView.swift */,
+				9FE832B8295303CF00CF16C6 /* RegionalAreaView.swift */,
+				9FE832C1295305A900CF16C6 /* GlobalView.swift */,
 				9FE832A82952064D00CF16C6 /* StoreView.swift */,
 				9FE832AC29520A8700CF16C6 /* TopTabView.swift */,
 				9FE8329C2952036000CF16C6 /* ContentView.swift */,
@@ -119,35 +133,11 @@
 		9FE832B7295303A500CF16C6 /* CommonViews */ = {
 			isa = PBXGroup;
 			children = (
-				9FE832B52953021600CF16C6 /* LocalRegionItemView.swift */,
+				9FE832B52953021600CF16C6 /* AreaItemView.swift */,
 				9FE832C72953541B00CF16C6 /* PackagesView.swift */,
 				9FE832C5295352D600CF16C6 /* PackageItemView.swift */,
 			);
 			path = CommonViews;
-			sourceTree = "<group>";
-		};
-		9FE832BE295304A100CF16C6 /* Local */ = {
-			isa = PBXGroup;
-			children = (
-				9FE832AA295208CB00CF16C6 /* LocalView.swift */,
-			);
-			path = Local;
-			sourceTree = "<group>";
-		};
-		9FE832BF295304B200CF16C6 /* Regional */ = {
-			isa = PBXGroup;
-			children = (
-				9FE832B8295303CF00CF16C6 /* RegionalView.swift */,
-			);
-			path = Regional;
-			sourceTree = "<group>";
-		};
-		9FE832C0295304BB00CF16C6 /* Global */ = {
-			isa = PBXGroup;
-			children = (
-				9FE832C1295305A900CF16C6 /* GlobalView.swift */,
-			);
-			path = Global;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -225,11 +215,13 @@
 			files = (
 				9FE832C2295305A900CF16C6 /* GlobalView.swift in Sources */,
 				9FE832AD29520A8700CF16C6 /* TopTabView.swift in Sources */,
-				9FE832AB295208CB00CF16C6 /* LocalView.swift in Sources */,
+				9FE832AB295208CB00CF16C6 /* LocalAreaView.swift in Sources */,
+				9F6E31DC295490BC00523739 /* AreaModel.swift in Sources */,
 				9FE832C6295352D600CF16C6 /* PackageItemView.swift in Sources */,
 				9FE8329D2952036000CF16C6 /* ContentView.swift in Sources */,
-				9FE832B62953021600CF16C6 /* LocalRegionItemView.swift in Sources */,
-				9FE832B9295303CF00CF16C6 /* RegionalView.swift in Sources */,
+				9F6E31DE295490F400523739 /* PackageModel.swift in Sources */,
+				9FE832B62953021600CF16C6 /* AreaItemView.swift in Sources */,
+				9FE832B9295303CF00CF16C6 /* RegionalAreaView.swift in Sources */,
 				9FE832A92952064D00CF16C6 /* StoreView.swift in Sources */,
 				9FE8329B2952036000CF16C6 /* AiraloCloneApp.swift in Sources */,
 				9FE832C82953541B00CF16C6 /* PackagesView.swift in Sources */,

@@ -7,21 +7,15 @@
 
 import SwiftUI
 
-struct LocalRegionItemView: View {
-  var image: String
-  var description: String
-  
-  init(image: String, description: String) {
-    self.image = image
-    self.description = description
-  }
+struct AreaItemView: View {
+  var model: AreaModel
   
   var body: some View {
     HStack(alignment: .center, spacing: 20) {
-      Image(image)
+      Image(model.image)
         .resizable()
         .frame(width: 37, height: 28)
-      Text(description)
+      Text(model.name)
         .font(Font.custom("IBMPlexSans-Medium", size: 15))
         .foregroundColor(Color("TextColor"))
       Spacer()
