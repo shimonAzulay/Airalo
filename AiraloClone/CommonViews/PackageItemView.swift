@@ -16,29 +16,27 @@ struct PackageItemView: View {
         Spacer()
           .frame(height: 20)
         VStack {
-          InnerView {
-            HeaderView(title: package.name,
-                       countriesAvilabilty: package.countriesAvilabilty)
-          }
+          HeaderView(title: package.name,
+                     countriesAvilabilty: package.countriesAvilabilty)
+          .padding(EdgeInsets(top: 20, leading: 20, bottom: 20, trailing: 20))
           
           Divider()
           
-          InnerView {
-            DetailView(detail: "DATA", amount: package.dataAmount)
-          }
+          DetailView(detail: "DATA", amount: package.dataAmount)
+            .padding(EdgeInsets(top: 20, leading: 20, bottom: 20, trailing: 20))
           
           Divider()
           
-          InnerView {
-            DetailView(detail: "VALIDITY", amount: package.timeValidity)
-          }
+          DetailView(detail: "VALIDITY", amount: package.timeValidity)
+            .padding(EdgeInsets(top: 20, leading: 20, bottom: 20, trailing: 20))
           
           Divider()
           
-          InnerView {
-            ButtonView(price: package.price)
-          }
+          ButtonView(price: package.price,
+                     borderColor: package.style.toColor)
+            .padding(EdgeInsets(top: 20, leading: 20, bottom: 20, trailing: 20))
         }
+        .foregroundColor(package.style.toColor)
         .background(LinearGradient(colors: [Color(hex: package.colorStart),
                                             Color(hex: package.colorEnd)],
                                    startPoint: .leading,
@@ -54,16 +52,16 @@ struct PackageItemView: View {
         Spacer()
         VStack() {
           CachedAsyncImageVIew(url: package.imageUrl) { image in
-              image.resizable()
+            image.resizable()
           } placeholder: {
-              ProgressView()
+            ProgressView()
           }
           .frame(width: 140, height: 88)
           .cornerRadius(10)
           .shadow(color: Color.shadow,
                   radius: 30,
                   x: 0,
-                  y: 10)            
+                  y: 10)
           Spacer()
         }
         .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 20))
@@ -83,11 +81,9 @@ extension PackageItemView {
         VStack(alignment: .leading, spacing: 5.5) {
           Text(title)
             .font(Font.plexSansSemiBold(size: 19))
-            .foregroundColor(Color.packageLight)
           HStack(spacing: 5) {
             Text("\(countriesAvilabilty) Countries")
               .font(Font.plexSansMedium(size: 13))
-              .foregroundColor(Color.packageLight)
             Text("Icon")
           }
         }
@@ -111,43 +107,37 @@ extension PackageItemView {
         Text("Icon")
         Text(detail)
           .font(Font.plexSansSemiBold(size: 11))
-          .foregroundColor(Color.packageLight)
         Spacer()
         Text(amount)
           .font(Font.plexSansMedium(size: 17))
-          .foregroundColor(Color.packageLight)
       }
     }
   }
   
   struct ButtonView: View {
     var price: String
+    var borderColor: Color
     
     var body: some View {
       Button(action: {}
              ,label: {
         Text("\(price) - BUY NOW")
           .font(Font.plexSansSemiBold(size: 11))
-          .foregroundColor(Color.packageLight)
       })
-        .frame(width: 295, height: 44)
-        .overlay(
-          RoundedRectangle(cornerRadius: 10)
-            .stroke(Color.packageLight, lineWidth: 1)
-        )
+      .frame(width: 295, height: 44)
+      .overlay(
+        RoundedRectangle(cornerRadius: 10)
+          .stroke(borderColor, lineWidth: 1)
+      )
     }
   }
-  
-  struct InnerView<Content: View>: View {
-    var content: Content
-    
-    init(@ViewBuilder content: @escaping () -> Content) {
-      self.content = content()
-    }
-    
-    var body: some View {
-      content
-        .padding(EdgeInsets(top: 20, leading: 20, bottom: 20, trailing: 20))
+}
+
+extension PackageModel.Style {
+  var toColor: Color {
+    switch self {
+    case .light: return Color.packageLight
+    case .dark: return Color.packageDark
     }
   }
 }

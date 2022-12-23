@@ -15,6 +15,15 @@ enum TopTab {
 
 struct TopTabView: View {
   @State private var selectedTab: TopTab = .local
+  
+  init() {
+    if let titleColor = UIColor.segmented,
+       let titleFont = UIFont.plexSansSemiBold(size: 13) {
+      UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: titleColor,
+                                                              .font: titleFont], for: .normal)
+    }
+  }
+  
   var body: some View {
     VStack(spacing: 10) {
       Picker("", selection: $selectedTab) {

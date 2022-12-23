@@ -10,8 +10,10 @@ import UIKit
 
 enum AppColors {
   static let normal = "TextColor"
-  static let Segmented = "SegmentedTextColor"
-  static let packageLight = "PackageTextColor"
+  static let segmented = "SegmentedTextColor"
+  static let packageLight = "PackageTextLightColor"
+  static let packageDark = "PackageTextDarkColor"
+  
   
   static let areaItem = "ItemColor"
   static let shadow = "ItemShadowColor"
@@ -23,11 +25,15 @@ extension Color {
   }
   
   static var segmented: Color {
-    Color(AppColors.Segmented)
+    Color(AppColors.segmented)
   }
   
   static var packageLight: Color {
     Color(AppColors.packageLight)
+  }
+  
+  static var packageDark: Color {
+    Color(AppColors.packageDark)
   }
   
   static var areaItem: Color {
@@ -42,5 +48,9 @@ extension Color {
 extension UIColor {
   static var normal: UIColor? {
     UIColor(named: AppColors.normal)
+  }
+  
+  static var segmented: UIColor? {
+    UIColor(named: AppColors.segmented)
   }
 }

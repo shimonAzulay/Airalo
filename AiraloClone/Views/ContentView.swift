@@ -19,17 +19,17 @@ struct ContentView: View {
     TabView {
       StoreView()
         .tabItem {
-          Label("Store", systemImage: "list.dash")
+          Label("Store", systemImage: "house.fill")
         }
       
       Text("My eSIMs")
         .tabItem {
-          Label("My eSIMs", systemImage: "square.and.pencil")
+          Label("My eSIMs", systemImage: "esim")
         }
       
       Text("Profile")
         .tabItem {
-          Label("Profile", systemImage: "square.and.pencil")
+          Label("Profile", systemImage: "person.crop.circle")
         }
     }
   }
