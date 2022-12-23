@@ -8,13 +8,6 @@
 import SwiftUI
 
 struct ContentView: View {
-  init() {
-    if let titleFont = UIFont.plexSansSemiBold(size: 10) {
-      UITabBarItem.appearance().setTitleTextAttributes([
-        .font: titleFont], for: .normal)
-    }
-  }
-  
   var body: some View {
     TabView {
       StoreView()
@@ -31,6 +24,13 @@ struct ContentView: View {
         .tabItem {
           Label("Profile", systemImage: "person.crop.circle")
         }
+    }
+    .onAppear {
+      UITabBar.appearance().backgroundColor = .white
+      if let titleFont = UIFont.plexSansSemiBold(size: 10) {
+        UITabBarItem.appearance().setTitleTextAttributes([
+          .font: titleFont], for: .normal)
+      }
     }
   }
 }

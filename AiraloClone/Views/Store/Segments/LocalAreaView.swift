@@ -25,6 +25,6 @@ struct LocalAreaView: View {
       Alert(title: Text("Something Went Wrong"),
             message: Text(error.errorMessage),
             dismissButton: .cancel())
-     }
+    }
   }
 }

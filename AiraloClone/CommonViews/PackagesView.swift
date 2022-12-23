@@ -11,11 +11,11 @@ struct PackagesView: View {
   @Binding var packages: [PackageModel]
   
   var body: some View {
-    ScrollView {
-      LazyVGrid(columns: [GridItem()], spacing: 20) {
-        ForEach(packages) { package in
-          PackageItemView(package: package)
-        }
+    LazyVGrid(columns: [GridItem()], spacing: 20) {
+      Spacer()
+        .frame(height: 5)
+      ForEach(packages) { package in
+        PackageItemView(package: package)
       }
     }
     .toolbar(.hidden, for: .tabBar)

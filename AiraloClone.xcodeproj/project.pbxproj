@@ -32,6 +32,8 @@
 		9F6E321729551BCA00523739 /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = 9F6E321629551BCA00523739 /* CachedAsyncImage */; };
 		9F6E321929551C6300523739 /* CachedAsyncImageVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6E321829551C6300523739 /* CachedAsyncImageVIew.swift */; };
 		9FB42EE72955C3910084A9CB /* StoreTopTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB42EE62955C3910084A9CB /* StoreTopTab.swift */; };
+		9FB42EEC2955DB1B0084A9CB /* Modifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB42EEB2955DB1B0084A9CB /* Modifiers.swift */; };
+		9FB42EEE2955ECE60084A9CB /* CustomSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB42EED2955ECE60084A9CB /* CustomSegmentedControl.swift */; };
 		9FE8329B2952036000CF16C6 /* AiraloCloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE8329A2952036000CF16C6 /* AiraloCloneApp.swift */; };
 		9FE8329D2952036000CF16C6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE8329C2952036000CF16C6 /* ContentView.swift */; };
 		9FE8329F2952036200CF16C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FE8329E2952036200CF16C6 /* Assets.xcassets */; };
@@ -72,6 +74,8 @@
 		9F6E32102954EE4F00523739 /* String+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Style.swift"; sourceTree = "<group>"; };
 		9F6E321829551C6300523739 /* CachedAsyncImageVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachedAsyncImageVIew.swift; sourceTree = "<group>"; };
 		9FB42EE62955C3910084A9CB /* StoreTopTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreTopTab.swift; sourceTree = "<group>"; };
+		9FB42EEB2955DB1B0084A9CB /* Modifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modifiers.swift; sourceTree = "<group>"; };
+		9FB42EED2955ECE60084A9CB /* CustomSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentedControl.swift; sourceTree = "<group>"; };
 		9FE832972952036000CF16C6 /* AiraloClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AiraloClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FE8329A2952036000CF16C6 /* AiraloCloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AiraloCloneApp.swift; sourceTree = "<group>"; };
 		9FE8329C2952036000CF16C6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -157,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				9F6E32002954E1EF00523739 /* ViewModelError.swift */,
+				9FB42EEB2955DB1B0084A9CB /* Modifiers.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -243,6 +248,7 @@
 				9FE832C72953541B00CF16C6 /* PackagesView.swift */,
 				9FE832C5295352D600CF16C6 /* PackageItemView.swift */,
 				9F6E321829551C6300523739 /* CachedAsyncImageVIew.swift */,
+				9FB42EED2955ECE60084A9CB /* CustomSegmentedControl.swift */,
 			);
 			path = CommonViews;
 			sourceTree = "<group>";
@@ -338,6 +344,7 @@
 				9FE832C6295352D600CF16C6 /* PackageItemView.swift in Sources */,
 				9F6E31F22954B26100523739 /* Responses.swift in Sources */,
 				9F6E321929551C6300523739 /* CachedAsyncImageVIew.swift in Sources */,
+				9FB42EEC2955DB1B0084A9CB /* Modifiers.swift in Sources */,
 				9F6E31FA2954CDF100523739 /* Color+Hex.swift in Sources */,
 				9F6E31F62954BB9900523739 /* RegionalAreaViewModel.swift in Sources */,
 				9FE8329D2952036000CF16C6 /* ContentView.swift in Sources */,
@@ -354,6 +361,7 @@
 				9F6E32012954E1EF00523739 /* ViewModelError.swift in Sources */,
 				9FB42EE72955C3910084A9CB /* StoreTopTab.swift in Sources */,
 				9F6E320B2954EA2F00523739 /* LocalAreaDetailViewModel.swift in Sources */,
+				9FB42EEE2955ECE60084A9CB /* CustomSegmentedControl.swift in Sources */,
 				9F6E31EB2954A46F00523739 /* Endpoints.swift in Sources */,
 				9F6E32092954EA0A00523739 /* LocalAreaDetailView.swift in Sources */,
 				9F6E31E4295498DA00523739 /* Fonts+Custom.swift in Sources */,

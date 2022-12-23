@@ -18,34 +18,30 @@ struct PackageItemView: View {
         VStack {
           HeaderView(title: package.name,
                      countriesAvilabilty: package.countriesAvilabilty)
-          .padding(EdgeInsets(top: 20, leading: 20, bottom: 20, trailing: 20))
+          .modifier(Padding())
           
           Divider()
           
-          DetailView(detail: "DATA", amount: package.dataAmount)
-            .padding(EdgeInsets(top: 20, leading: 20, bottom: 20, trailing: 20))
+          DetailView(detail: "DATA", amount: package.dataAmount, icon: "arrow.up.arrow.down.circle")
+            .modifier(Padding())
           
           Divider()
           
-          DetailView(detail: "VALIDITY", amount: package.timeValidity)
-            .padding(EdgeInsets(top: 20, leading: 20, bottom: 20, trailing: 20))
+          DetailView(detail: "VALIDITY", amount: package.timeValidity, icon: "calendar")
+            .modifier(Padding())
           
           Divider()
           
           ButtonView(price: package.price,
                      borderColor: package.style.toColor)
-            .padding(EdgeInsets(top: 20, leading: 20, bottom: 20, trailing: 20))
+          .modifier(Padding())
         }
         .foregroundColor(package.style.toColor)
         .background(LinearGradient(colors: [Color(hex: package.colorStart),
                                             Color(hex: package.colorEnd)],
                                    startPoint: .leading,
                                    endPoint: .trailing))
-        .cornerRadius(10)
-        .shadow(color: Color.shadow,
-                radius: 30,
-                x: 0,
-                y: 10)
+        .modifier(ItemModifier())
       }
       
       HStack {
@@ -57,11 +53,7 @@ struct PackageItemView: View {
             ProgressView()
           }
           .frame(width: 140, height: 88)
-          .cornerRadius(10)
-          .shadow(color: Color.shadow,
-                  radius: 30,
-                  x: 0,
-                  y: 10)
+          .modifier(ItemModifier())
           Spacer()
         }
         .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 20))
@@ -84,7 +76,9 @@ extension PackageItemView {
           HStack(spacing: 5) {
             Text("\(countriesAvilabilty) Countries")
               .font(Font.plexSansMedium(size: 13))
-            Text("Icon")
+            Image(systemName: "arrow.right.circle.fill")
+              .resizable()
+              .frame(width: 12, height: 12)
           }
         }
         
@@ -96,15 +90,19 @@ extension PackageItemView {
   struct DetailView: View {
     var detail: String
     var amount: String
+    var icon: String
     
-    init(detail: String, amount: String) {
+    init(detail: String, amount: String, icon: String) {
       self.detail = detail
       self.amount = amount
+      self.icon = icon
     }
     
     var body: some View {
       HStack(spacing: 6) {
-        Text("Icon")
+        Image(systemName: icon)
+          .resizable()
+          .frame(width: 22, height: 22)
         Text(detail)
           .font(Font.plexSansSemiBold(size: 11))
         Spacer()
@@ -129,6 +127,13 @@ extension PackageItemView {
         RoundedRectangle(cornerRadius: 10)
           .stroke(borderColor, lineWidth: 1)
       )
+    }
+  }
+  
+  struct Padding: ViewModifier {
+    func body(content: Content) -> some View {
+      content
+        .padding(EdgeInsets(top: 20, leading: 20, bottom: 20, trailing: 20))
     }
   }
 }

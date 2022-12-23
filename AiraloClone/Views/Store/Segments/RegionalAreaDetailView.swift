@@ -12,7 +12,7 @@ struct RegionalAreaDetailView: View {
   @Binding var shouldDismiss: Bool
   @StateObject var viewModel: RegionalAreaDetailViewModel
   var regionId: Int
-      
+  
   init(viewModel: RegionalAreaDetailViewModel,
        regionId: Int,
        shouldDismiss: Binding<Bool>) {
@@ -22,19 +22,22 @@ struct RegionalAreaDetailView: View {
   }
   
   var body: some View {
-    PackagesView(packages: $viewModel.packages)
-      .onAppear {
-        viewModel.fetchPackages(forRegionId: regionId)
+    ScrollView {
+      PackagesView(packages: $viewModel.packages)
+    }
+    .background(Color.segmentBackgroundColor.ignoresSafeArea(.all, edges: .bottom))
+    .onAppear {
+      viewModel.fetchPackages(forRegionId: regionId)
+    }
+    .onChange(of: shouldDismiss) { newValue in
+      if newValue {
+        dismiss()
       }
-      .onChange(of: shouldDismiss) { newValue in
-        if newValue {
-          dismiss()
-        }
-      }
-      .alert(item: $viewModel.error) { error in
-        Alert(title: Text("Something Went Wrong"),
-              message: Text(error.errorMessage),
-              dismissButton: .cancel())
-       }
+    }
+    .alert(item: $viewModel.error) { error in
+      Alert(title: Text("Something Went Wrong"),
+            message: Text(error.errorMessage),
+            dismissButton: .cancel())
+    }
   }
 }

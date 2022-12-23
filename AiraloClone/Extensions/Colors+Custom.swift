@@ -8,49 +8,54 @@
 import SwiftUI
 import UIKit
 
-enum AppColors {
-  static let normal = "TextColor"
-  static let segmented = "SegmentedTextColor"
-  static let packageLight = "PackageTextLightColor"
-  static let packageDark = "PackageTextDarkColor"
-  
-  
-  static let areaItem = "ItemColor"
-  static let shadow = "ItemShadowColor"
-}
-
 extension Color {
   static var normal: Color {
-    Color(AppColors.normal)
+    Color("TextColor")
   }
   
-  static var segmented: Color {
-    Color(AppColors.segmented)
+  static var loginButtonBorder: Color {
+    Color("LoginButtonBorderColor")
+  }
+  
+  static var segmentedText: Color {
+    Color("SegmentedTextColor")
+  }
+  
+  static var selectedSegmented: Color {
+    Color("SegmentedSelectedColor")
+  }
+  
+  static var selectedSegmentedTextColor: Color {
+    Color("SegementedSelectedTextColor")
+  }
+  
+  static var unselectedSegmentedTextColor: Color {
+    Color("SegmentedUnselectedTextColor")
   }
   
   static var packageLight: Color {
-    Color(AppColors.packageLight)
+    Color("PackageTextLightColor")
   }
   
   static var packageDark: Color {
-    Color(AppColors.packageDark)
+    Color("PackageTextDarkColor")
+  }
+  
+  static var segmentBackgroundColor: Color {
+    Color("SegmentContentBackgroundColor")
   }
   
   static var areaItem: Color {
-    Color(AppColors.areaItem)
+    Color("ItemColor")
   }
   
   static var shadow: Color {
-    Color(AppColors.shadow)
+    Color("ItemShadowColor")
   }
 }
 
 extension UIColor {
   static var normal: UIColor? {
-    UIColor(named: AppColors.normal)
-  }
-  
-  static var segmented: UIColor? {
-    UIColor(named: AppColors.segmented)
+    UIColor(named: "TextColor")
   }
 }
