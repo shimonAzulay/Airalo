@@ -7,14 +7,9 @@
 
 import SwiftUI
 
-enum TopTab {
-  case local
-  case regional
-  case global
-}
-
-struct TopTabView: View {
-  @State private var selectedTab: TopTab = .local
+struct StoreTopTabView: View {
+  var tabs = [StoreTopTab.local, StoreTopTab.regional, StoreTopTab.global]
+  @State var selectedTab: StoreTopTab = .local
   
   init() {
     if let titleColor = UIColor.segmented,
@@ -27,9 +22,9 @@ struct TopTabView: View {
   var body: some View {
     VStack(spacing: 10) {
       Picker("", selection: $selectedTab) {
-        Text("Local eSIMs").tag(TopTab.local)
-        Text("Regional eSIMs").tag(TopTab.regional)
-        Text("Global eSIM").tag(TopTab.global)
+        ForEach(tabs) { tab in
+          Text(tab.title).tag(tab)
+        }
       }
       .pickerStyle(.segmented)
       .font(Font.plexSansMedium(size: 13))
@@ -43,6 +38,7 @@ struct TopTabView: View {
         
       case .global: GlobalView(viewModel: GlobalAreaViewModel(networkService: NetworkServiceFactory.shared))
       }
+
     }
   }
 }

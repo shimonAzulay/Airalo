@@ -31,13 +31,14 @@
 		9F6E32112954EE4F00523739 /* String+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6E32102954EE4F00523739 /* String+Style.swift */; };
 		9F6E321729551BCA00523739 /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = 9F6E321629551BCA00523739 /* CachedAsyncImage */; };
 		9F6E321929551C6300523739 /* CachedAsyncImageVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6E321829551C6300523739 /* CachedAsyncImageVIew.swift */; };
+		9FB42EE72955C3910084A9CB /* StoreTopTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB42EE62955C3910084A9CB /* StoreTopTab.swift */; };
 		9FE8329B2952036000CF16C6 /* AiraloCloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE8329A2952036000CF16C6 /* AiraloCloneApp.swift */; };
 		9FE8329D2952036000CF16C6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE8329C2952036000CF16C6 /* ContentView.swift */; };
 		9FE8329F2952036200CF16C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FE8329E2952036200CF16C6 /* Assets.xcassets */; };
 		9FE832A22952036200CF16C6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FE832A12952036200CF16C6 /* Preview Assets.xcassets */; };
 		9FE832A92952064D00CF16C6 /* StoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE832A82952064D00CF16C6 /* StoreView.swift */; };
 		9FE832AB295208CB00CF16C6 /* LocalAreaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE832AA295208CB00CF16C6 /* LocalAreaView.swift */; };
-		9FE832AD29520A8700CF16C6 /* TopTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE832AC29520A8700CF16C6 /* TopTabView.swift */; };
+		9FE832AD29520A8700CF16C6 /* StoreTopTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE832AC29520A8700CF16C6 /* StoreTopTabView.swift */; };
 		9FE832B62953021600CF16C6 /* AreaItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE832B52953021600CF16C6 /* AreaItemView.swift */; };
 		9FE832B9295303CF00CF16C6 /* RegionalAreaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE832B8295303CF00CF16C6 /* RegionalAreaView.swift */; };
 		9FE832C2295305A900CF16C6 /* GlobalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE832C1295305A900CF16C6 /* GlobalView.swift */; };
@@ -70,6 +71,7 @@
 		9F6E320C2954EA4100523739 /* RegionalAreaDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionalAreaDetailViewModel.swift; sourceTree = "<group>"; };
 		9F6E32102954EE4F00523739 /* String+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Style.swift"; sourceTree = "<group>"; };
 		9F6E321829551C6300523739 /* CachedAsyncImageVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachedAsyncImageVIew.swift; sourceTree = "<group>"; };
+		9FB42EE62955C3910084A9CB /* StoreTopTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreTopTab.swift; sourceTree = "<group>"; };
 		9FE832972952036000CF16C6 /* AiraloClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AiraloClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FE8329A2952036000CF16C6 /* AiraloCloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AiraloCloneApp.swift; sourceTree = "<group>"; };
 		9FE8329C2952036000CF16C6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -77,7 +79,7 @@
 		9FE832A12952036200CF16C6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9FE832A82952064D00CF16C6 /* StoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreView.swift; sourceTree = "<group>"; };
 		9FE832AA295208CB00CF16C6 /* LocalAreaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalAreaView.swift; sourceTree = "<group>"; };
-		9FE832AC29520A8700CF16C6 /* TopTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopTabView.swift; sourceTree = "<group>"; };
+		9FE832AC29520A8700CF16C6 /* StoreTopTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreTopTabView.swift; sourceTree = "<group>"; };
 		9FE832B52953021600CF16C6 /* AreaItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaItemView.swift; sourceTree = "<group>"; };
 		9FE832B8295303CF00CF16C6 /* RegionalAreaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionalAreaView.swift; sourceTree = "<group>"; };
 		9FE832C1295305A900CF16C6 /* GlobalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalView.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 			children = (
 				9F6E31DB295490BC00523739 /* AreaModel.swift */,
 				9F6E31DD295490F400523739 /* PackageModel.swift */,
+				9FB42EE62955C3910084A9CB /* StoreTopTab.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -163,7 +166,7 @@
 			children = (
 				9F6E320F2954EC9A00523739 /* Segments */,
 				9FE832A82952064D00CF16C6 /* StoreView.swift */,
-				9FE832AC29520A8700CF16C6 /* TopTabView.swift */,
+				9FE832AC29520A8700CF16C6 /* StoreTopTabView.swift */,
 			);
 			path = Store;
 			sourceTree = "<group>";
@@ -326,7 +329,7 @@
 				9F6E31E629549B5E00523739 /* Colors+Custom.swift in Sources */,
 				9F6E31F82954BCE400523739 /* GlobalViewModel.swift in Sources */,
 				9FE832C2295305A900CF16C6 /* GlobalView.swift in Sources */,
-				9FE832AD29520A8700CF16C6 /* TopTabView.swift in Sources */,
+				9FE832AD29520A8700CF16C6 /* StoreTopTabView.swift in Sources */,
 				9F6E32032954E5C900523739 /* Double+Price.swift in Sources */,
 				9F6E31EE2954B10F00523739 /* LocalAreaViewModel.swift in Sources */,
 				9FE832AB295208CB00CF16C6 /* LocalAreaView.swift in Sources */,
@@ -349,6 +352,7 @@
 				9F6E32072954E9E500523739 /* RegionalAreaDetailView.swift in Sources */,
 				9FE832C82953541B00CF16C6 /* PackagesView.swift in Sources */,
 				9F6E32012954E1EF00523739 /* ViewModelError.swift in Sources */,
+				9FB42EE72955C3910084A9CB /* StoreTopTab.swift in Sources */,
 				9F6E320B2954EA2F00523739 /* LocalAreaDetailViewModel.swift in Sources */,
 				9F6E31EB2954A46F00523739 /* Endpoints.swift in Sources */,
 				9F6E32092954EA0A00523739 /* LocalAreaDetailView.swift in Sources */,

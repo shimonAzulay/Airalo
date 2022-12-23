@@ -34,19 +34,10 @@ enum NetworkServiceError: Error, CustomStringConvertible {
 }
 
 protocol NetworkService {
-  func data<PAYLOAD: Encodable, RESPONSE: Decodable>(endpoint: Endpoint, payload: PAYLOAD) async throws -> RESPONSE
   func data<RESPONSE: Decodable>(endpoint: Endpoint) async throws -> RESPONSE
 }
 
-class AiraloNetworkService: NetworkService {
-  func data<PAYLOAD: Encodable, RESPONSE: Decodable>(endpoint: Endpoint, payload: PAYLOAD) async throws -> RESPONSE {
-    guard let request = endpoint.makeRequest(with: payload) else {
-      throw NetworkServiceError.invalidEndpoint
-    }
-    
-    return try await data(request: request)
-  }
-  
+class AiraloNetworkService: NetworkService {  
   func data<RESPONSE: Decodable>(endpoint: Endpoint) async throws -> RESPONSE {
     guard let request = endpoint.makeRequest() else {
       throw NetworkServiceError.invalidEndpoint

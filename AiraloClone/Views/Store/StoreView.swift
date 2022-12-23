@@ -9,6 +9,7 @@ import SwiftUI
 
 struct StoreView: View {
   @State private var searchText = ""
+  let tabs = [StoreTopTab.local, StoreTopTab.regional, StoreTopTab.global]
   
   init() {
     if let titleColor = UIColor.normal,
@@ -21,7 +22,7 @@ struct StoreView: View {
   var body: some View {
     NavigationStack {
       ScrollView(.vertical) {
-        TopTabView()
+        StoreTopTabView()
           .navigationTitle("Hello")
           .navigationBarTitleDisplayMode(.large)
           .toolbar {
