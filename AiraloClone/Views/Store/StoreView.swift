@@ -40,9 +40,9 @@ struct StoreView: View {
                   .font(Font.plexSansSemiBold(size: 11))
                   .foregroundColor(Color.normal)
               })
-              .frame(width: 80, height: 25, alignment: .center)
+              .frame(width: 80, height: 23, alignment: .center)
               .overlay(
-                RoundedRectangle(cornerRadius: 3)
+                RoundedRectangle(cornerRadius: 5)
                   .stroke(Color.normal, lineWidth: 1)
               )
             }

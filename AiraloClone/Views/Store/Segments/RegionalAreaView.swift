@@ -15,9 +15,9 @@ struct RegionalAreaView: View {
   }
   
   var body: some View {
-    AreaView(areas: $viewModel.areas, title: "Regions") { regionId in
+    AreaView(areas: $viewModel.areas, title: "Regions") { regionId, shouldDismiss in
       RegionalAreaDetailView(viewModel: RegionalAreaDetailViewModel(networkService: viewModel.networkService),
-                             regionId: regionId)
+                             regionId: regionId, shouldDismiss: shouldDismiss)
     }
     .onAppear {
       viewModel.fetch()
