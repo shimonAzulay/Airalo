@@ -29,6 +29,10 @@ extension Font {
 }
 
 extension UIFont {
+  static func plexSansMedium(size: CGFloat) -> UIFont? {
+    UIFont(name: PlexSansFonts.medium, size: size)
+  }
+  
   static func plexSansSemiBold(size: CGFloat) -> UIFont? {
     UIFont(name: PlexSansFonts.semiBold, size: size)
   }

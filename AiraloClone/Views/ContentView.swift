@@ -25,6 +25,7 @@ struct ContentView: View {
           Label("Profile", systemImage: "person.crop.circle")
         }
     }
+    .preferredColorScheme(.light)
     .onAppear {
       UITabBar.appearance().backgroundColor = .white
       if let titleFont = UIFont.plexSansSemiBold(size: 10) {

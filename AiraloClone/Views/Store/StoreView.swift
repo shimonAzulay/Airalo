@@ -7,19 +7,23 @@
 
 import SwiftUI
 
-struct StoreView: View {
-  @State private var searchText = ""
-  let tabs = [StoreTopTab.local, StoreTopTab.regional, StoreTopTab.global]
-  
+struct StoreView: View {  
   init() {
-    UINavigationBar.appearance().backgroundColor = .white
+    let navigationBarAppearance = UINavigationBarAppearance()
+    navigationBarAppearance.configureWithOpaqueBackground()
     if let titleColor = UIColor.normal,
-       let titleFont = UIFont.plexSansSemiBold(size: 27) {
-      UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: titleColor]
-      UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: titleColor,
-                                                   
-                                                               .font: titleFont]
+       let largeTitleFont = UIFont.plexSansSemiBold(size: 27),
+       let inlineTitleFont = UIFont.plexSansMedium(size: 15) {
+      navigationBarAppearance.titleTextAttributes = [.foregroundColor: titleColor,
+                                                          .font: inlineTitleFont]
+      navigationBarAppearance.largeTitleTextAttributes = [.foregroundColor: titleColor,
+                                                               .font: largeTitleFont]
     }
+    navigationBarAppearance.shadowColor = .clear
+    navigationBarAppearance.backgroundColor = .white
+    UINavigationBar.appearance().standardAppearance = navigationBarAppearance
+    UINavigationBar.appearance().compactAppearance = navigationBarAppearance
+    UINavigationBar.appearance().scrollEdgeAppearance = navigationBarAppearance
   }
   
   var body: some View {
@@ -29,33 +33,39 @@ struct StoreView: View {
           .navigationTitle("Hello")
           .navigationBarTitleDisplayMode(.large)
           .toolbar {
-            VStack(alignment: .center, spacing: 2) {
-              HStack(spacing: 2) {
-                Image(systemName: "equal.circle")
-                  .resizable()
-                  .frame(width: 16, height: 16)
-                Text("Airmoney")
-                  .font(Font.plexSansMedium(size: 13))
-                  .foregroundColor(Color.normal)
-              }
-              Button(action: {}
-                     ,label: {
-                Text("LOG IN")
-                  .font(Font.plexSansSemiBold(size: 11))
-                  .foregroundColor(Color.normal)
-              })
-              .frame(width: 80, height: 28, alignment: .center)
-              .overlay(
-                RoundedRectangle(cornerRadius: 5)
-                  .stroke(Color.loginButtonBorder, lineWidth: 1)
-              )
+            ToolbarItem(placement: .navigationBarTrailing) {
+              LoginButtonView()
             }
           }
       }
       .background(Color.segmentBackgroundColor.ignoresSafeArea(.all, edges: .bottom))
-      .searchable(text: $searchText,
-                  prompt: "Search data packs for +190 countries and regions")
-      .font(Font.plexSansRegular(size: 13))
+    }
+  }
+}
+
+struct LoginButtonView: View {
+  var body: some View {
+    VStack(alignment: .center, spacing: 2) {
+      HStack(spacing: 2) {
+        Image(systemName: "equal.circle")
+          .resizable()
+          .frame(width: 14, height: 14)
+          .foregroundColor(Color.normal)
+        Text("Airmoney")
+          .font(Font.plexSansMedium(size: 13))
+          .foregroundColor(Color.normal)
+      }
+      Button(action: {}
+             ,label: {
+        Text("LOG IN")
+          .font(Font.plexSansSemiBold(size: 11))
+          .foregroundColor(Color.normal)
+      })
+      .frame(width: 70, height: 20, alignment: .center)
+      .overlay(
+        RoundedRectangle(cornerRadius: 5)
+          .stroke(Color.loginButtonBorder, lineWidth: 1)
+      )
     }
   }
 }

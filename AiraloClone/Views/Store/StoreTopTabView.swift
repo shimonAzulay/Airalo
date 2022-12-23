@@ -10,6 +10,7 @@ import SwiftUI
 struct StoreTopTabView: View {
   var tabs = [StoreTopTab.local, StoreTopTab.regional, StoreTopTab.global]
   @State var selectedTabIndex: Int = 0
+  @State private var searchText = ""
 
   var body: some View {
     VStack {
@@ -28,7 +29,9 @@ struct StoreTopTabView: View {
         
       case .global: GlobalView(viewModel: GlobalAreaViewModel(networkService: NetworkServiceFactory.shared))
       }
-
     }
+    .searchable(text: $searchText,
+                prompt: "Search data packs for +190 countries and regions")
+    .font(Font.plexSansRegular(size: 13))
   }
 }
