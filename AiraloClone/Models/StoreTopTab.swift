@@ -19,8 +19,8 @@ enum StoreTopTab: Identifiable {
   var title: String {
     switch self {
     case .local: return "Local eSIMs"
-    case .global: return "Regional eSIMs"
-    case .regional: return "Global eSIM"
+    case .global: return "Global eSIM"
+    case .regional: return "Regional eSIMs"
     }
   }
 }

@@ -11,13 +11,13 @@ struct PackageModel: Identifiable {
   let id = UUID()
   let name: String
   let imageUrl: URL
-  let countriesAvilabilty: Int
   let dataAmount: String
   let timeValidity: String
   let price: String
   let style: Style
   let colorStart: String
   let colorEnd: String
+  let countries: [String]
   
   enum Style {
     case light

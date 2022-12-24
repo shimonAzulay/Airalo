@@ -36,12 +36,5 @@ struct CustomSegmentedControl: View {
         )
       }
     }
-    .frame(height: 44)
-  }
-}
-
-struct CustomSegmentedControl_Previews: PreviewProvider {
-  static var previews: some View {
-    CustomSegmentedControl(preselectedIndex: .constant(0), options: ["One", "two", "three"])
   }
 }

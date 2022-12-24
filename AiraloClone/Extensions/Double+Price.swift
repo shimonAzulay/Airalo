@@ -9,6 +9,10 @@ import Foundation
 
 extension Double {
   var removeTrailingZeros: String {
-    String(format: "%g", self)
+    if rounded() == self {
+      return String(format: "%g", self)
+    } else {
+      return String(format: "%.2f", self)
+    }
   }
 }

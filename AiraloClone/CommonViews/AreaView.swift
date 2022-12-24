@@ -27,7 +27,7 @@ struct AreaView<DetailView: View>: View {
         Text(title)
           .font(Font.plexSansSemiBold(size: 19))
           .foregroundColor(Color.normal)
-          .frame(width: 335, height: 55, alignment: .leading)
+          .frame(maxWidth: .infinity, idealHeight: 55, alignment: .leading)
       }
       
       ForEach(areas) { area in

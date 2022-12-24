@@ -23,7 +23,11 @@ struct RegionalAreaDetailView: View {
   
   var body: some View {
     ScrollView {
-      PackagesView(packages: $viewModel.packages)
+      VStack {
+        PackagesView(packages: $viewModel.packages)
+          .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
+      }
+      .frame(maxWidth: .infinity)
     }
     .background(Color.segmentBackgroundColor.ignoresSafeArea(.all, edges: .bottom))
     .onAppear {

@@ -47,6 +47,7 @@ class AiraloNetworkService: NetworkService {
   }
   
   private func data<RESPONSE: Decodable>(request: URLRequest) async throws -> RESPONSE {
+    print(request)
     let (data, response) = try await URLSession.shared.data(for: request)
     guard let httpResponse = response as? HTTPURLResponse,
           200..<300 ~= httpResponse.statusCode else {

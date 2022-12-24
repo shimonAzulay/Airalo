@@ -7,7 +7,9 @@
 
 import SwiftUI
 
-struct StoreView: View {  
+struct StoreView: View {
+  @State private var searchText = ""
+  
   init() {
     let navigationBarAppearance = UINavigationBarAppearance()
     navigationBarAppearance.configureWithOpaqueBackground()
@@ -15,9 +17,9 @@ struct StoreView: View {
        let largeTitleFont = UIFont.plexSansSemiBold(size: 27),
        let inlineTitleFont = UIFont.plexSansMedium(size: 15) {
       navigationBarAppearance.titleTextAttributes = [.foregroundColor: titleColor,
-                                                          .font: inlineTitleFont]
+                                                     .font: inlineTitleFont]
       navigationBarAppearance.largeTitleTextAttributes = [.foregroundColor: titleColor,
-                                                               .font: largeTitleFont]
+                                                          .font: largeTitleFont]
     }
     navigationBarAppearance.shadowColor = .clear
     navigationBarAppearance.backgroundColor = .white
@@ -37,8 +39,11 @@ struct StoreView: View {
               LoginButtonView()
             }
           }
+          .searchable(text: $searchText,
+                      prompt: "Search data packs for +190 countries and regions")
+          .font(Font.plexSansRegular(size: 13))
       }
-      .background(Color.segmentBackgroundColor.ignoresSafeArea(.all, edges: .bottom))
+      .background(Color.segmentBackgroundColor.ignoresSafeArea(.all, edges: [.bottom]))
     }
   }
 }

@@ -15,9 +15,9 @@ struct PackageItemView: View {
       VStack {
         Spacer()
           .frame(height: 20)
-        VStack {
+        VStack(spacing: 0) {
           HeaderView(title: package.name,
-                     countriesAvilabilty: package.countriesAvilabilty)
+                     detail: package.countries.count > 1 ? HeaderView.Detail.countries(package.countries.count) : HeaderView.Detail.country(package.countries.first ?? ""))
           .modifier(Padding())
           
           Divider()
@@ -59,29 +59,38 @@ struct PackageItemView: View {
         .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 20))
       }
     }
-    .frame(width: 335, alignment: .leading)
+    .frame(alignment: .leading)
   }
 }
 
 extension PackageItemView {
   struct HeaderView: View {
+    enum Detail {
+      case country(String)
+      case countries(Int)
+    }
     var title: String
-    var countriesAvilabilty: Int
+    var detail: Detail
     
     var body: some View {
       HStack {
         VStack(alignment: .leading, spacing: 5.5) {
           Text(title)
             .font(Font.plexSansSemiBold(size: 19))
-          HStack(spacing: 5) {
-            Text("\(countriesAvilabilty) Countries")
+          switch detail {
+          case .country(let country):
+            Text(country)
               .font(Font.plexSansMedium(size: 13))
-            Image(systemName: "arrow.right.circle.fill")
-              .resizable()
-              .frame(width: 12, height: 12)
+          case .countries(let countries):
+            HStack(spacing: 5) {
+              Text("\(countries) Countries")
+                .font(Font.plexSansMedium(size: 13))
+              Image(systemName: "arrow.right.circle.fill")
+                .resizable()
+                .frame(width: 12, height: 12)
+            }
           }
         }
-        
         Spacer()
       }
     }
@@ -124,7 +133,7 @@ extension PackageItemView {
       })
       .frame(width: 295, height: 44)
       .overlay(
-        RoundedRectangle(cornerRadius: 10)
+        RoundedRectangle(cornerRadius: 5)
           .stroke(borderColor, lineWidth: 1)
       )
     }

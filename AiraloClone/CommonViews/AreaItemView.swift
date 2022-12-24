@@ -31,7 +31,7 @@ struct AreaItemView: View {
         .frame(width: 7, height: 12)
     }
     .padding(EdgeInsets(top: 14, leading: 20, bottom: 14, trailing: 20))
-    .frame(width: 335, alignment: .leading)
+    .frame(alignment: .leading)
     .background(Color.areaItem)
     .modifier(ItemModifier())
   }

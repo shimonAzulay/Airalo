@@ -54,7 +54,9 @@ struct PackagesResponse: Decodable {
     let gradientEnd: String
     let countires: [Country]
     
-    struct Country: Decodable {}
+    struct Country: Decodable {
+      let title: String
+    }
     
     enum OuterKeys: String, CodingKey {
       case data, validity, price, `operator`
