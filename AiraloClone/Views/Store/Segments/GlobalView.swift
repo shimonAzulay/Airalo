@@ -17,7 +17,7 @@ struct GlobalView: View {
   var body: some View {
     PackagesView(packages: $viewModel.packages)
       .onAppear {
-        viewModel.fetch()
+        viewModel.fetchPackages(forAreaId: nil)
       }
       .alert(item: $viewModel.error) { error in
         Alert(title: Text("Something Went Wrong"),

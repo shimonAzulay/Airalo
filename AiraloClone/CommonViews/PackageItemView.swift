@@ -56,7 +56,7 @@ struct PackageItemView: View {
           .modifier(ItemModifier())
           Spacer()
         }
-        .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 20))
+        .padding(.trailing, 20)
       }
     }
     .frame(alignment: .leading)
@@ -142,7 +142,7 @@ extension PackageItemView {
   struct Padding: ViewModifier {
     func body(content: Content) -> some View {
       content
-        .padding(EdgeInsets(top: 20, leading: 20, bottom: 20, trailing: 20))
+        .padding(20)
     }
   }
 }

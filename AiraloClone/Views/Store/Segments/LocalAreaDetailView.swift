@@ -32,7 +32,7 @@ struct LocalAreaDetailView: View {
     }
     .background(Color.segmentBackgroundColor.ignoresSafeArea(.all, edges: .bottom))
     .onAppear {
-      viewModel.fetchPackages(forCountryId: countryId)
+      viewModel.fetchPackages(forAreaId: countryId)
     }
     .onChange(of: shouldDismiss) { newValue in
       if newValue {

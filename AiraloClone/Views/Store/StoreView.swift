@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct StoreView: View {
+  private let scrollCoordinateSpace = "SCROLL"
+  @State private var animateLogin = false
   @State private var searchText = ""
   
   init() {
@@ -36,7 +38,12 @@ struct StoreView: View {
           .navigationBarTitleDisplayMode(.large)
           .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
-              LoginButtonView()
+              LoginButtonView(hideHeader: $animateLogin)
+            }
+          }
+          .offset(coordinateSpace: scrollCoordinateSpace) { offset in
+            withAnimation(.easeOut(duration: 0.1)) {
+              animateLogin = offset < 90
             }
           }
           .searchable(text: $searchText,
@@ -49,8 +56,9 @@ struct StoreView: View {
 }
 
 struct LoginButtonView: View {
+  @Binding var hideHeader: Bool
   var body: some View {
-    VStack(alignment: .center, spacing: 2) {
+    VStack(alignment: .center, spacing: 0) {
       HStack(spacing: 2) {
         Image(systemName: "equal.circle")
           .resizable()
@@ -60,17 +68,23 @@ struct LoginButtonView: View {
           .font(Font.plexSansMedium(size: 13))
           .foregroundColor(Color.normal)
       }
+      .isHidden(hideHeader)
+      .frame(height: hideHeader ? 0 : nil)
+      .clipped()
       Button(action: {}
              ,label: {
-        Text("LOG IN")
-          .font(Font.plexSansSemiBold(size: 11))
-          .foregroundColor(Color.normal)
+        HStack(alignment: .center, spacing: 0) {
+          Text("LOG IN")
+            .font(Font.plexSansSemiBold(size: 11))
+            .foregroundColor(Color.normal)
+          Spacer()
+        }
       })
-      .frame(width: 70, height: 20, alignment: .center)
-      .overlay(
-        RoundedRectangle(cornerRadius: 5)
+      .frame(width: 80, height: 26, alignment: .center)
+      .overlay(alignment: .center) {
+        RoundedRectangle(cornerRadius: 3)
           .stroke(Color.loginButtonBorder, lineWidth: 1)
-      )
+      }
     }
   }
 }

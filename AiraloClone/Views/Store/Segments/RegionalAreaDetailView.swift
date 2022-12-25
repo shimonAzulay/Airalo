@@ -31,7 +31,7 @@ struct RegionalAreaDetailView: View {
     }
     .background(Color.segmentBackgroundColor.ignoresSafeArea(.all, edges: .bottom))
     .onAppear {
-      viewModel.fetchPackages(forRegionId: regionId)
+      viewModel.fetchPackages(forAreaId: regionId)
     }
     .onChange(of: shouldDismiss) { newValue in
       if newValue {
