@@ -12,7 +12,7 @@ extension View {
   func offset(coordinateSpace: String, offset: @escaping (CGFloat) -> Void) -> some View {
     self
       .overlay {
-        GeometryReader{ proxy in
+        GeometryReader { proxy in
           let minY = proxy.frame(in: .named(coordinateSpace)).minY
           
           Color.clear
