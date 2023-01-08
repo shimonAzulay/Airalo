@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F3B50332966D9D1006BACC9 /* LoginButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3B50322966D9D1006BACC9 /* LoginButtonView.swift */; };
+		9F3B50362966DA37006BACC9 /* MySimView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3B50352966DA37006BACC9 /* MySimView.swift */; };
+		9F3B50382966DE95006BACC9 /* MySimTopTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3B50372966DE95006BACC9 /* MySimTopTab.swift */; };
 		9F6E31CD295458AC00523739 /* IBMPlexSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9F6E31C02954589400523739 /* IBMPlexSans-Medium.ttf */; };
 		9F6E31D4295458AC00523739 /* IBMPlexSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9F6E31C62954589400523739 /* IBMPlexSans-Regular.ttf */; };
 		9F6E31D6295458AC00523739 /* IBMPlexSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9F6E31C42954589400523739 /* IBMPlexSans-SemiBold.ttf */; };
@@ -32,7 +35,7 @@
 		9F6E321929551C6300523739 /* CachedAsyncImageVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6E321829551C6300523739 /* CachedAsyncImageVIew.swift */; };
 		9FB42EE72955C3910084A9CB /* StoreTopTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB42EE62955C3910084A9CB /* StoreTopTab.swift */; };
 		9FB42EEC2955DB1B0084A9CB /* Modifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB42EEB2955DB1B0084A9CB /* Modifiers.swift */; };
-		9FB42EEE2955ECE60084A9CB /* CustomSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB42EED2955ECE60084A9CB /* CustomSegmentedControl.swift */; };
+		9FB42EEE2955ECE60084A9CB /* SegmentedControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB42EED2955ECE60084A9CB /* SegmentedControlView.swift */; };
 		9FB42F0C295847D40084A9CB /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB42F0B295847D40084A9CB /* ViewExtensions.swift */; };
 		9FB42F0E2958494C0084A9CB /* AreaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB42F0D2958494C0084A9CB /* AreaViewModel.swift */; };
 		9FB42F1129584A5F0084A9CB /* PackagesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB42F1029584A5F0084A9CB /* PackagesViewModel.swift */; };
@@ -42,7 +45,6 @@
 		9FE832A22952036200CF16C6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FE832A12952036200CF16C6 /* Preview Assets.xcassets */; };
 		9FE832A92952064D00CF16C6 /* StoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE832A82952064D00CF16C6 /* StoreView.swift */; };
 		9FE832AB295208CB00CF16C6 /* LocalAreaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE832AA295208CB00CF16C6 /* LocalAreaView.swift */; };
-		9FE832AD29520A8700CF16C6 /* StoreTopTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE832AC29520A8700CF16C6 /* StoreTopTabView.swift */; };
 		9FE832B62953021600CF16C6 /* AreaItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE832B52953021600CF16C6 /* AreaItemView.swift */; };
 		9FE832B9295303CF00CF16C6 /* RegionalAreaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE832B8295303CF00CF16C6 /* RegionalAreaView.swift */; };
 		9FE832C2295305A900CF16C6 /* GlobalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE832C1295305A900CF16C6 /* GlobalView.swift */; };
@@ -51,6 +53,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9F3B50322966D9D1006BACC9 /* LoginButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButtonView.swift; sourceTree = "<group>"; };
+		9F3B50352966DA37006BACC9 /* MySimView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySimView.swift; sourceTree = "<group>"; };
+		9F3B50372966DE95006BACC9 /* MySimTopTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySimTopTab.swift; sourceTree = "<group>"; };
 		9F6E31C02954589400523739 /* IBMPlexSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexSans-Medium.ttf"; sourceTree = "<group>"; };
 		9F6E31C42954589400523739 /* IBMPlexSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexSans-SemiBold.ttf"; sourceTree = "<group>"; };
 		9F6E31C62954589400523739 /* IBMPlexSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexSans-Regular.ttf"; sourceTree = "<group>"; };
@@ -76,7 +81,7 @@
 		9F6E321829551C6300523739 /* CachedAsyncImageVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachedAsyncImageVIew.swift; sourceTree = "<group>"; };
 		9FB42EE62955C3910084A9CB /* StoreTopTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreTopTab.swift; sourceTree = "<group>"; };
 		9FB42EEB2955DB1B0084A9CB /* Modifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modifiers.swift; sourceTree = "<group>"; };
-		9FB42EED2955ECE60084A9CB /* CustomSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentedControl.swift; sourceTree = "<group>"; };
+		9FB42EED2955ECE60084A9CB /* SegmentedControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControlView.swift; sourceTree = "<group>"; };
 		9FB42F0B295847D40084A9CB /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
 		9FB42F0D2958494C0084A9CB /* AreaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaViewModel.swift; sourceTree = "<group>"; };
 		9FB42F1029584A5F0084A9CB /* PackagesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackagesViewModel.swift; sourceTree = "<group>"; };
@@ -87,7 +92,6 @@
 		9FE832A12952036200CF16C6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9FE832A82952064D00CF16C6 /* StoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreView.swift; sourceTree = "<group>"; };
 		9FE832AA295208CB00CF16C6 /* LocalAreaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalAreaView.swift; sourceTree = "<group>"; };
-		9FE832AC29520A8700CF16C6 /* StoreTopTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreTopTabView.swift; sourceTree = "<group>"; };
 		9FE832B52953021600CF16C6 /* AreaItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaItemView.swift; sourceTree = "<group>"; };
 		9FE832B8295303CF00CF16C6 /* RegionalAreaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionalAreaView.swift; sourceTree = "<group>"; };
 		9FE832C1295305A900CF16C6 /* GlobalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalView.swift; sourceTree = "<group>"; };
@@ -107,6 +111,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9F3B50342966DA13006BACC9 /* MySim */ = {
+			isa = PBXGroup;
+			children = (
+				9F3B50352966DA37006BACC9 /* MySimView.swift */,
+				9F3B50372966DE95006BACC9 /* MySimTopTab.swift */,
+			);
+			path = MySim;
+			sourceTree = "<group>";
+		};
 		9F6E31BC2954588300523739 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -122,7 +135,6 @@
 			children = (
 				9F6E31DB295490BC00523739 /* AreaModel.swift */,
 				9F6E31DD295490F400523739 /* PackageModel.swift */,
-				9FB42EE62955C3910084A9CB /* StoreTopTab.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -176,7 +188,7 @@
 			children = (
 				9F6E320F2954EC9A00523739 /* Segments */,
 				9FE832A82952064D00CF16C6 /* StoreView.swift */,
-				9FE832AC29520A8700CF16C6 /* StoreTopTabView.swift */,
+				9FB42EE62955C3910084A9CB /* StoreTopTab.swift */,
 			);
 			path = Store;
 			sourceTree = "<group>";
@@ -248,6 +260,7 @@
 		9FE832AE29523E4600CF16C6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				9F3B50342966DA13006BACC9 /* MySim */,
 				9F6E320E2954EC8D00523739 /* Store */,
 				9FE8329C2952036000CF16C6 /* ContentView.swift */,
 			);
@@ -262,7 +275,8 @@
 				9FE832C72953541B00CF16C6 /* PackagesView.swift */,
 				9FE832C5295352D600CF16C6 /* PackageItemView.swift */,
 				9F6E321829551C6300523739 /* CachedAsyncImageVIew.swift */,
-				9FB42EED2955ECE60084A9CB /* CustomSegmentedControl.swift */,
+				9FB42EED2955ECE60084A9CB /* SegmentedControlView.swift */,
+				9F3B50322966D9D1006BACC9 /* LoginButtonView.swift */,
 			);
 			path = CommonViews;
 			sourceTree = "<group>";
@@ -348,8 +362,8 @@
 			files = (
 				9F6E31F82954BCE400523739 /* GlobalViewModel.swift in Sources */,
 				9FE832C2295305A900CF16C6 /* GlobalView.swift in Sources */,
-				9FE832AD29520A8700CF16C6 /* StoreTopTabView.swift in Sources */,
 				9F6E32032954E5C900523739 /* DoubleExtensions.swift in Sources */,
+				9F3B50332966D9D1006BACC9 /* LoginButtonView.swift in Sources */,
 				9F6E31EE2954B10F00523739 /* LocalAreaViewModel.swift in Sources */,
 				9FE832AB295208CB00CF16C6 /* LocalAreaView.swift in Sources */,
 				9F6E320D2954EA4100523739 /* RegionalAreaDetailViewModel.swift in Sources */,
@@ -365,8 +379,10 @@
 				9FE8329D2952036000CF16C6 /* ContentView.swift in Sources */,
 				9F6E31DE295490F400523739 /* PackageModel.swift in Sources */,
 				9F6E31F42954B92A00523739 /* AreaView.swift in Sources */,
+				9F3B50382966DE95006BACC9 /* MySimTopTab.swift in Sources */,
 				9FE832B62953021600CF16C6 /* AreaItemView.swift in Sources */,
 				9FE832B9295303CF00CF16C6 /* RegionalAreaView.swift in Sources */,
+				9F3B50362966DA37006BACC9 /* MySimView.swift in Sources */,
 				9F6E31E92954A44C00523739 /* NetworkService.swift in Sources */,
 				9FE832A92952064D00CF16C6 /* StoreView.swift in Sources */,
 				9FB42F1129584A5F0084A9CB /* PackagesViewModel.swift in Sources */,
@@ -377,7 +393,7 @@
 				9F6E32012954E1EF00523739 /* ViewModelError.swift in Sources */,
 				9FB42EE72955C3910084A9CB /* StoreTopTab.swift in Sources */,
 				9F6E320B2954EA2F00523739 /* LocalAreaDetailViewModel.swift in Sources */,
-				9FB42EEE2955ECE60084A9CB /* CustomSegmentedControl.swift in Sources */,
+				9FB42EEE2955ECE60084A9CB /* SegmentedControlView.swift in Sources */,
 				9F6E31EB2954A46F00523739 /* Endpoints.swift in Sources */,
 				9F6E32092954EA0A00523739 /* LocalAreaDetailView.swift in Sources */,
 				9F6E31E4295498DA00523739 /* FontsExtensions.swift in Sources */,

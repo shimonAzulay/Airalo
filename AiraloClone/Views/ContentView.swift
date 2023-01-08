@@ -8,6 +8,25 @@
 import SwiftUI
 
 struct ContentView: View {
+  
+  init() {
+    let navigationBarAppearance = UINavigationBarAppearance()
+    navigationBarAppearance.configureWithOpaqueBackground()
+    if let titleColor = UIColor.normal,
+       let largeTitleFont = UIFont.plexSansSemiBold(size: 27),
+       let inlineTitleFont = UIFont.plexSansMedium(size: 15) {
+      navigationBarAppearance.titleTextAttributes = [.foregroundColor: titleColor,
+                                                     .font: inlineTitleFont]
+      navigationBarAppearance.largeTitleTextAttributes = [.foregroundColor: titleColor,
+                                                          .font: largeTitleFont]
+    }
+    navigationBarAppearance.shadowColor = .clear
+    navigationBarAppearance.backgroundColor = .white
+    UINavigationBar.appearance().standardAppearance = navigationBarAppearance
+    UINavigationBar.appearance().compactAppearance = navigationBarAppearance
+    UINavigationBar.appearance().scrollEdgeAppearance = navigationBarAppearance
+  }
+  
   var body: some View {
     TabView {
       StoreView()
@@ -15,7 +34,7 @@ struct ContentView: View {
           Label("Store", systemImage: "house.fill")
         }
       
-      Text("My eSIMs")
+      MySimView()
         .tabItem {
           Label("My eSIMs", systemImage: "esim")
         }

@@ -1,22 +1,21 @@
 //
-//  StoreView.swift
+//  MySimView.swift
 //  AiraloClone
 //
-//  Created by Shimon Azulay on 20/12/2022.
+//  Created by Shimon Azulay on 05/01/2023.
 //
 
 import SwiftUI
 
-struct StoreView: View {
+struct MySimView: View {
   private let scrollCoordinateSpace = "SCROLL"
   @State private var animateLogin = false
-  @State private var searchText = ""
   
   var body: some View {
     NavigationStack {
       ScrollView(.vertical) {
-        TopTabView(tabs: [StoreTopTab.local, StoreTopTab.regional, StoreTopTab.global])
-          .navigationTitle("Hello")
+        TopTabView(tabs: [MySimTopTab.current, MySimTopTab.archived])
+          .navigationTitle("My eSIMs")
           .navigationBarTitleDisplayMode(.large)
           .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
@@ -28,9 +27,6 @@ struct StoreView: View {
               animateLogin = offset < 90
             }
           }
-          .searchable(text: $searchText,
-                      prompt: "Search data packs for +190 countries and regions")
-          .font(Font.plexSansRegular(size: 13))
       }
       .background(Color.segmentBackgroundColor.ignoresSafeArea(.all, edges: [.bottom]))
     }
